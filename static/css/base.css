@@ -83,7 +83,38 @@ body {
     color: #000; /* Change color on hover */
 }
 
+/* Footer Elements */
+
+footer {
+    background-color: #000; /* Dark background color */
+    color: #fff; /* White text color */
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    list-style-type: none;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #fff; /* White text color */
+}
+
+footer ul li a:hover {
+    color: #ccc; /* Lighter color on hover */
+}
+
+
 /* -------------------------------- Media Queries */
+
+@media (min-width: 768px) {
+    footer .text-md-end {
+        text-align: end; /* Align to the end (right) on medium screens and larger */
+    }
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
