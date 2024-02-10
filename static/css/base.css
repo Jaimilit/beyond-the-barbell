@@ -77,7 +77,9 @@ body {
     color: #000; /* Change color on hover */
 }
 
-
+.bg-black {
+    background: #000 !important;
+}
 
 /* Footer Elements */
 
