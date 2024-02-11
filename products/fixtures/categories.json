@@ -1,4 +1,3 @@
-[{"pk": 1, "model": "products.category", "fields": {"name": "activewear", "friendly_name": "Activewear"}}, {"pk": 2, "model": "products.category", "fields": {"name": "gear", "friendly_name": "Gear"}}, {"pk": 3, "model": "products.category", "fields": {"name": "health products", "friendly_name": "Health Products"}}]
-
+[{"pk": 1, "model": "products.category", "fields": {"name": "activewear", "friendly_name": "Activewear"}}, {"pk": 2, "model": "products.category", "fields": {"name": "gear", "friendly_name": "Gear"}}, {"pk": 3, "model": "products.category", "fields": {"name": "health products", "friendly_name": "Health Products"}}, {"pk": 4, "model": "products.category", "fields": {"name": "subscription", "friendly_name": "Subscription"}}]
 
 
