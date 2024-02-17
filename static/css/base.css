@@ -91,6 +91,16 @@ body {
 	z-index: -1;
 }
 
+.product-image {
+    height: 300px; /* Adjust the height as needed */
+    object-fit: cover; /* This property ensures that the image covers the entire container */
+}
+
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+
 /* Footer Elements */
 
 footer {
