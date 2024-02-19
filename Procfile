@@ -1,0 +1,1 @@
+web: gunicorn beyond_the_barebell.wsgi:application
