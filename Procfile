@@ -1,1 +1,1 @@
-web: gunicorn beyond_the_barbell.wsgi:application
+web: gunicorn beyond-the-barbell.wsgi:application
