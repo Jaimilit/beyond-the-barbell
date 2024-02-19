@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     '8000-jaimilit-beyondthebarbe-soa2wsirv6t.ws-eu108.gitpod.io',
     '8000-jaimilit-beyondthebarbe-soa2wsirv6t.ws-us108.gitpod.io',
     'https://beyond-the-barbell-0789d667f147.herokuapp.com/',
+    'beyond-the-barbell-0789d667f147.herokuapp.com',
     'jaimilit-beyond-the-barbell.herokuapp.com/',
     'localhost',
 ]
