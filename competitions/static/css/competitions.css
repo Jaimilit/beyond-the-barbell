@@ -1,0 +1,9 @@
+/* Custom CSS for centering the competitions */
+.container-fluid {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    margin-top: 20px; /* Adjust the margin as needed */
+}

@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'competitions/css/competitions.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Competitions</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <h5 class="card-title">Mud Run Competition</h5>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="card-text">A mud run is an exhilarating event that tests participants' physical and mental prowess as they navigate through a series of challenging obstacles set across rugged terrain. From crawling through mud pits to scaling walls and swinging over monkey bars, mud runs offer a thrilling mix of challenges that require strength, agility, and problem-solving skills. Participants of all fitness levels come together to embrace the adventure, push their limits, and conquer obstacles while fostering teamwork and camaraderie.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="{% static 'path_to_your_image/image1.jpg' %}" class="img-fluid" alt="Image for Mud Run Competition">
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <a href="#" class="btn btn-dark mt-3">Join Competition</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <h5 class="card-title">CrossFit Challenge</h5>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="card-text">Description of the CrossFit Challenge goes here.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="{% static 'path_to_your_image/image2.jpg' %}" class="img-fluid" alt="Image for CrossFit Challenge">
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <a href="#" class="btn btn-dark mt-3">Join Competition</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <h5 class="card-title">Marathon Race</h5>
+                        </div>
+                        <div class="col-md-5">
+                            <p class="card-text">Description of the Marathon Race goes here.</p>
+                        </div>
+                        <div class="col-md-2">
+                            <img src="{% static 'path_to_your_image/image3.jpg' %}" class="img-fluid" alt="Image for Marathon Race">
+                        </div>
+                        <div class="col-md-2 text-center">
+                            <a href="#" class="btn btn-dark mt-3">Join Competition</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
