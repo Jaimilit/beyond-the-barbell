@@ -31,6 +31,7 @@ class Booking(models.Model):
 
     def save(self, *args, **kwargs):
         super(Booking, self).save(*args, **kwargs)
+        
 
 
     
