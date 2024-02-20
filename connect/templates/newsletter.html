@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'connect/css/connect.css' %}">
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Newsletter</h2> 
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <div class="row align-items-center">
+                            <div class="col-md-12">
+                                <h3 class="section-header">Subscribe to Our Monthly Newsletter</h3> 
+                                <p class="section-description">Keep Up-to-Date on Important Events & Challenges, New Products, & Other Important Information</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <!-- Begin Mailchimp Signup Form -->
+                                <div id="signup">
+                                    <form action="https://herokuapp.us11.list-manage.com/subscribe/post?u=a4555d773e3dfda0f76c288b7&amp;id=018df1d831&amp;f_id=009ea2e0f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                        <div id="signup_scroll">
+                                            <div class="form-field">
+                                                <label for="chimp-EMAIL">Email Address <span class="required">*</span></label>
+                                                <input type="email" value="" name="EMAIL" class="required email input-field" id="chimp-email" required>
+                                                <span id="mce-EMAIL-HELPERTEXT" class="helper-text"></span>
+                                            </div>
+                                            <div id="mce-responses" class="clear foot">
+                                                <div class="response" id="mce-error-response" style="display:none"></div>
+                                                <div class="response" id="mce-success-response" style="display:none"></div>
+                                            </div>
+                                            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                                                <input type="text" name="b_a4555d773e3dfda0f76c288b7_018df1d831" tabindex="-1" value="">
+                                            </div>
+                                            <div class="submit-section">
+                                                <div class="form-actions">
+                                                    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-dark mt-3 submit-button">
+                                                    <p class="branding-logo">
+                                                        <a href="http://eepurl.com/ipbPPg" title="Mailchimp - email marketing made easy and fun">
+                                                            <img src="https://eep.io/mc-cdn-images/template_images/branding_logo_text_dark_dtp.svg" alt="Mailchimp Logo">
+                                                        </a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!--End mc_embed_signup-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

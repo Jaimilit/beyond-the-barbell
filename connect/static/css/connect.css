@@ -9,11 +9,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Ensure the card body takes up the full height */
+    height: 100%; 
 }
 
 .booking {
     display: flex;
-    justify-content: center; /* Horizontally center content */
-    align-items: center; /* Vertically center content */
+    justify-content: center; 
+    align-items: center; 
+}
+
+#sign-up {
+    margin-top: 20px; 
+    padding-top: 20px;
 }

@@ -21,8 +21,11 @@ class ContactForm(forms.ModelForm):
 
 
 
-
 class ReviewForm(forms.ModelForm):
+    """ Review form for review Personal Trainers"""
     class Meta:
         model = TrainerReview
-        fields = ['title', 'trainer', 'content', 'rating']
+        fields = ['title', 'trainer', 'content', 'rating',]
+    
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

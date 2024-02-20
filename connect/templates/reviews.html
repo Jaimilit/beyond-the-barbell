@@ -31,10 +31,24 @@
                         <div class="col-md-12">
                             <form method="POST">
                                 {% csrf_token %}
-                                {{ form|crispy }}                                 
-                                <button input type="submit" class="btn btn-dark mt-3">Submit</button>
+                                {{ form|crispy }}                                     
+                                <button type="submit" class="btn btn-dark mt-3">Submit</button>
                             </form>
                         </div>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h3 class="card-title">Existing Reviews</h3>
+                        <ul class="list-group">
+                            {% for review in reviews %}
+                                <li class="list-group-item">
+                                    <h4>{{ review.title }}</h4>
+                                    <p>{{ review.content }}</p>
+                                    <p>Rating: {{ review.rating }}</p>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             </div>
