@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'competitions/css/competitions.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="booking">
+        <div class="col-md-8 mt-3 offset-md-2">
+            <div class="booking-header">
+                <h3>Hello {{ request.user.username }}! These are your current bookings:</h3>
+            </div>
+            <ul class="list-group">
+                {% for booking in user_bookings %}
+                <li class="list-group-item">
+                    <div class="booking-details">
+                        <p><strong>Title:</strong> {{ booking.competition.title }}</p>
+                        <p><strong>Description:</strong> {{ booking.competition.description }}</p>
+                        <p><strong>Image:</strong> <img src="{{ booking.competition.image.url }}" alt="{{ booking.competition.title }}" class="img-fluid"></p>
+                    </div>
+                    <a href="{% url 'delete_booking' booking.id %}" class="card-link btn btn-danger mt-3 mb-3">
+                        <i class="fa-solid fa-pen-to-square"></i> Delete
+                    </a>
+                    <a href="{% url 'edit_booking' booking.id %}" class="card-link btn btn-primary mt-3 mb-3">
+                        <i class="fa-solid fa-pen-to-square"></i> Edit
+                    </a>
+                </li>
+                {% empty %}
+                <li class="list-group-item">No bookings found.</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -7,3 +7,9 @@
 .card {
     margin-top: 20px; /* Adjust the margin as needed */
 }
+
+.booking {
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+}
