@@ -6,7 +6,20 @@ class Competition(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='competitions/images/')
 
+
 class Booking(models.Model):
+    """This model provides the booking info for the user to
+    book a competition"""
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    competition = models.ForeignKey(Competition, on_delete=models.CASCADE)
-    date_booked = models.DateTimeField(auto_now_add=True)
+    competition = models.ForeignKey(
+        'competition',
+        on_delete=models.CASCADE
+    )
+
+    def __str__(self):
+        return (
+            f"{self.user.username} booked {self.competition.title} "
+        )
+
+    def save(self, *args, **kwargs):
+        super(Booking, self).save(*args, **kwargs)
