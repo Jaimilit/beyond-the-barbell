@@ -25,4 +25,4 @@ class ContactForm(forms.ModelForm):
 class ReviewForm(forms.ModelForm):
     class Meta:
         model = TrainerReview
-        fields = ['title', 'content', 'rating']
+        fields = ['title', 'trainer', 'content', 'rating']

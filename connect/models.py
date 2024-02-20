@@ -16,7 +16,7 @@ class Contact(models.Model):
 
 
 class TrainerReview(models.Model):
-    trainer = models.ForeignKey('Trainer', on_delete=models.CASCADE)
+    trainer = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     content = models.TextField()
     rating = models.IntegerField()

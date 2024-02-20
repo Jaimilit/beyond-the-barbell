@@ -30,29 +30,21 @@ def contact(request, *args, **kwargs):
     return render(request, 'contact_us.html', {'form': form})
 
 def reviews(request):
-    # Your view logic goes here
+    reviews = TrainerReview.objects.all()
+    context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
-    
 
 def submit_review(request, trainer_id):
-    """ A view to handle the submission of trainer reviews """
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.trainer_id = trainer_id
             review.save()
-            messages.success(
-                request,
-                'Thank you for your review!'
-            )
-            return redirect(reverse('trainer_detail', args=[trainer_id]))
+            messages.success(request, 'Thank you for your review!')
+            return redirect(reverse('reviews'))
         else:
-            messages.error(
-                request, 'Oops! There was an error submitting your review. \
-                    Please check your details and try again.'
-            )
+            messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
     else:
         form = ReviewForm()
-
     return render(request, 'reviews.html', {'form': form})

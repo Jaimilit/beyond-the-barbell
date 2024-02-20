@@ -20,5 +20,5 @@ admin.site.register(Contact, ContactAdmin)
 @admin.register(TrainerReview)
 class TrainerReviewAdmin(admin.ModelAdmin):
     list_display = ['title', 'trainer', 'rating', 'date_posted']
-    search_fields = ['title', 'content']
+    search_fields = ['trainer', 'content']
     list_filter = ['trainer', 'rating', 'date_posted']
