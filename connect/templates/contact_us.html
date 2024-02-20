@@ -14,21 +14,30 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="booking">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <div class="booking-header">
-                <h3>Contact US</h3>
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Contact Us</h2> 
             </div>
-            <div class="row justify-content-center mt-5">
-                <div class="col-12 col-md-6">
-                    <form method="POST">
-                        {% csrf_token %}
-                        {{ form|crispy }}                                 
-                        <button input type="submit" class="btn btn-dark">Submit</button>
-                    </form>
-            </ul>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card mb-3">
+                    <div class="card-body row align-items-center">
+                        <div class="col-md-12">
+                            <h3 class="booking-header">Please Complete This Contact Form</h3> 
+                        </div>
+                        <div class="col-md-12">
+                            <form method="POST">
+                                {% csrf_token %}
+                                {{ form|crispy }}                                 
+                                <button input type="submit" class="btn btn-dark mt-3">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}

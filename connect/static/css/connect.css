@@ -4,8 +4,12 @@
     justify-content: center;
 }
 
-.card {
-    margin-top: 20px; /* Adjust the margin as needed */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Ensure the card body takes up the full height */
 }
 
 .booking {
