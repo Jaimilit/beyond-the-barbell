@@ -26,13 +26,9 @@
                     <div class="booking-details">
                         <p><strong>Title:</strong> {{ booking.competition.title }}</p>
                         <p><strong>Description:</strong> {{ booking.competition.description }}</p>
-                        <p><strong>Image:</strong> <img src="{{ booking.competition.image.url }}" alt="{{ booking.competition.title }}" class="img-fluid"></p>
                     </div>
                     <a href="{% url 'delete_booking' booking.id %}" class="card-link btn btn-danger mt-3 mb-3">
                         <i class="fa-solid fa-pen-to-square"></i> Delete
-                    </a>
-                    <a href="{% url 'edit_booking' booking.id %}" class="card-link btn btn-primary mt-3 mb-3">
-                        <i class="fa-solid fa-pen-to-square"></i> Edit
                     </a>
                 </li>
                 {% empty %}

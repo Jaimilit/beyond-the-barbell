@@ -1,9 +1,7 @@
 from django.contrib import admin
 from .models import Booking, Competition
 
-
 @admin.register(Competition)
-# Create competitiom optiomns in admin panel
 class CompetitionAdmin(admin.ModelAdmin):
     list_display = (
         'title',
@@ -12,7 +10,11 @@ class CompetitionAdmin(admin.ModelAdmin):
 
 
 @admin.register(Booking)
-# Create booking opporunities based on the competitions in admin panel
 class BookingAdmin(admin.ModelAdmin):
-    list_display = ('user', 'competition')
-    list_filter = ('user', 'competition')
+    list_display = ('user_profile', 'competition')
+    list_filter = ('competition',)
+
+    def user_profile(self, obj):
+        return obj.user_profile.user.username if obj.user_profile else None
+
+    user_profile.short_description = 'User Profile'
