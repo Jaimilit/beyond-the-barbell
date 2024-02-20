@@ -23,73 +23,27 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
+                {% for competition in competitions %}
                 <div class="card mb-3">
                     <div class="card-body row align-items-center">
                         <div class="col-md-3 text-center">
-                            <h5 class="card-title">Mud Run Competition</h5>
+                            <h5 class="card-title">{{ competition.title }}</h5>
                         </div>
                         <div class="col-md-5">
-                            <p class="card-text">A mud run is an exhilarating event that tests participants' physical and mental prowess as they navigate through a series of challenging obstacles set across rugged terrain. From crawling through mud pits to scaling walls and swinging over monkey bars, mud runs offer a thrilling mix of challenges that require strength, agility, and problem-solving skills. Participants of all fitness levels come together to embrace the adventure, push their limits, and conquer obstacles while fostering teamwork and camaraderie.</p>
+                            <p class="card-text">{{ competition.description }}</p>
                         </div>
                         <div class="col-md-2">
-                            <img src="/media/mud-run.jpg" class="img-fluid" alt="women running covered in mud">
+                            <img src="{{ competition.image.url }}" class="img-fluid" alt="{{ competition.title }}">
                         </div>
                         <div class="col-md-2 text-center">
-                            <a href="#" class="btn btn-dark mt-3">Join Competition</a>
+                            <form method="POST" action="{% url 'book_competition' competition.id %}">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-dark mt-3">Join Competition</button>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card mb-3">
-                    <div class="card-body row align-items-center">
-                        <div class="col-md-3 text-center">
-                            <h5 class="card-title">CrossFit Challenge</h5>
-                        </div>
-                        <div class="col-md-5">
-                            <p class="card-text">
-                            The CrossFit Challenge mirrors the intensity and diversity seen in the "Fittest on Earth" CrossFit competition, 
-                            where athletes from around the globe converge to test their strength, endurance, and mental fortitude. 
-                            This challenge pushes participants through a series of high-intensity workouts that blend weightlifting, 
-                            gymnastics, and metabolic conditioning, all aimed at pushing the limits of human performance. 
-                           </p>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="/media/crossfit-comp.jpeg" class="img-fluid" alt="man olympic lift">
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <a href="#" class="btn btn-dark mt-3">Join Competition</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card mb-3">
-                    <div class="card-body row align-items-center">
-                        <div class="col-md-3 text-center">
-                            <h5 class="card-title">The Murph Challenge</h5>
-                        </div>
-                        <div class="col-md-5">
-                            <p class="card-text">
-                            The "Murph Challenge" is named after Lieutenant Michael P. Murphy, a Navy SEAL who was posthumously awarded the Medal of Honor for his heroic actions in Afghanistan. 
-                            the Murph Challenge is a grueling workout that has become a staple in CrossFit communities worldwide. Participants undertake a challenging sequence of exercises, 
-                            including a one-mile run, 100 pull-ups, 200 push-ups, 300 air squats, followed by another one-mile run, all performed while wearing a weighted vest 
-                            (typically 20 pounds for men, 14 pounds for women). The Murph Challenge honors the sacrifice of military members and serves as a test of physical and mental strength, 
-                            endurance, and dedication to honoring those who have served.
-                            </p>
-                        </div>
-                        <div class="col-md-2">
-                            <img src="/media/pullup.jpeg" class="img-fluid" alt="women doing pull up">
-                        </div>
-                        <div class="col-md-2 text-center">
-                            <a href="#" class="btn btn-dark mt-3">Join Competition</a>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>

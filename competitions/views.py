@@ -4,9 +4,11 @@ from .forms import BookingForm
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
+
 def competitions(request):
     """ A view to return the competitions page """
-    return render(request, 'competitions.html')
+    competitions = Competition.objects.all()
+    return render(request, 'competitions.html', {'competitions': competitions})
 
 @login_required
 def book_competition(request, competition_id):
