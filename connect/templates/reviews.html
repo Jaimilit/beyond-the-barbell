@@ -23,32 +23,32 @@
         </div>
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <!-- Form to submit a review -->
+                <div class="card mb-3">
+                    <div class="card-body row align-items-center">
+                        <div class="col-md-12">
+                            <h3 class="booking-header">Write a Review</h3> 
+                        </div>
+                        <div class="col-md-12">
+                            <a href="{% url 'submit_review' %}" class="btn btn-dark mt-3">Write Review</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Display existing reviews -->
                 <div class="card mb-3">
                     <div class="card-body">
                         <h3 class="card-title">Existing Reviews</h3>
                         <ul class="list-group">
                             {% for review in reviews %}
-
-                            <li class="list-group-item">
-                                <p><strong>Title: </strong>{{ review.title }}</p>
-                                <p><strong>Trainer: </strong>{{ review.trainer }}</p>
-                                <p><strong>Review: </strong>{{ review.content }}</p>
-                                <p><strong>Rating: </strong>{{ review.rating }}</p>
-                            </li>
-                            {% empty %}
-                            <li class="list-group-item">No reviews yet.</li>
+                                <li class="list-group-item">
+                                    <p><strong>Title: </strong>{{ review.title }}</p>
+                                    <p><strong>Trainer: </strong>{{ review.trainer }}</p>
+                                    <p><strong>Review: </strong>{{ review.content }}</p>
+                                    <p><strong>Rating: </strong>{{ review.rating }}</p>
+                                </li>
                             {% endfor %}
                         </ul>
-                    </div>
-                </div>
-                <div class="card mb-3">
-                    <div class="card-body">
-                        <h3 class="card-title">Write a Review</h3> 
-                        <form method="POST" action="{% url 'submit_review' %}"> 
-                            {% csrf_token %}
-                            {{ form|crispy }}                                     
-                            <button type="submit" class="btn btn-dark mt-3">Submit Review</button>
-                        </form>
                     </div>
                 </div>
             </div>

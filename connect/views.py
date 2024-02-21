@@ -39,18 +39,35 @@ def reviews(request):
 
 def submit_review(request):
     if request.method == 'POST':
-        form = ReviewForm(request.POST)  
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save()
+            messages.success(request, 'Thank you for your review!')
+            return redirect(reverse('reviews'))
+        else:
+            messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
+    else:
+        form = ReviewForm()
+    return render(request, 'submit_review.html', {'form': form})
+
+    
+
+
+
+"""
+def submit_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
             review.save()
             messages.success(request, 'Thank you for your review!')
+            return redirect(reverse('reviews'))
         else:
             messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
     else:
         form = ReviewForm()  # If it's a GET request, initialize an empty form
-    return redirect('reviews')
-
-    """
+    return render(request, 'reviews.html', {'form': form})
 
 def submit_review(request):
     if request.method == 'POST':
@@ -70,19 +87,16 @@ def submit_review(request):
     return render(request, 'reviews.html', {'form': form})
 
 
-def submit_review(request):
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)  
-        if form.is_valid():
-            review = form.save(commit=False)
-            review.save()
-            messages.success(request, 'Thank you for your review!')
-            return redirect(reverse('reviews'))
-        else:
-            messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
-    else:
-        form = ReviewForm()  # If it's a GET request, initialize an empty form
-    return render(request, 'reviews.html', {'form': form})
+
+
+
+
+    
+
+
+
+
+
 
 """
 
