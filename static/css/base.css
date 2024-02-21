@@ -195,10 +195,15 @@ input[name='q']::placeholder {
 }
 
 /* Footer Elements */
-
 footer {
     background-color: #000; /* Dark background color */
     color: #fff; /* White text color */
+    padding: 10px 0; /* Decrease padding to make it smaller */
+    position: fixed; /* Fixed positioning */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 100%; /* Full width */
+    font-size: 14px; /* Decrease font size */
+    margin: 0;
 }
 
 footer ul {

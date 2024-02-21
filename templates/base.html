@@ -138,6 +138,41 @@
 
 {% endblock %}
 
+<footer class="container-fluid">
+    <div class="row bg-dark text-white py-3">
+        <div class="col-12 col-md-6">
+            <ul class="list-unstyled">
+                <li><a href="{% url 'private_policy' %}">Privacy Policy</a></li>
+            </ul>
+        </div>
+        <div class="col-12 col-md-6 text-md-end">
+            <p>Follow Us:</p>
+            <ul class="list-inline mb-0">
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-twitter-square"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
 {% block postloadjs %}
 <script type="text/javascript">
     $('.toast').toast('show');

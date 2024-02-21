@@ -53,3 +53,9 @@ def newsletter(request):
     """ A view to return the newsletter signup page """
 
     return render(request, 'newsletter.html')
+
+
+def private_policy(request):
+    """ A view to render the privacy statement in compliance with GDPR """
+
+    return render(request, 'private_policy.html')
