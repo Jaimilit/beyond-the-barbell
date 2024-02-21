@@ -22,3 +22,12 @@ class TrainerReviewAdmin(admin.ModelAdmin):
     list_display = ['title', 'trainer', 'rating', 'date_posted']
     search_fields = ['trainer', 'content']
     list_filter = ['trainer', 'rating', 'date_posted']
+    actions = ['delete_review']
+
+    def delete_review(self, request, queryset):
+        for obj in queryset:
+            obj.delete()
+        self.message_user(request, "Selected reviews were successfully deleted.")
+
+    # Customize the display name for the action
+    delete_review.short_description = "Delete selected reviews"
