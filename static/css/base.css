@@ -195,33 +195,28 @@ input[name='q']::placeholder {
 }
 
 /* Footer Elements */
-footer {
-    background-color: #000; /* Dark background color */
-    color: #fff; /* White text color */
-    padding: 10px 0; /* Decrease padding to make it smaller */
-    position: fixed; /* Fixed positioning */
-    bottom: 0; /* Stick to the bottom of the viewport */
-    width: 100%; /* Full width */
-    font-size: 14px; /* Decrease font size */
-    margin: 0;
+
+.footer {
+    margin-top: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(77, 73, 73);
+    bottom: 0;
+    color: whitesmoke;
 }
 
-footer ul {
-    padding: 0;
-    margin: 0;
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
 }
 
-footer ul li {
-    list-style-type: none;
-}
-
-footer ul li a {
-    text-decoration: none;
-    color: #fff; /* White text color */
-}
-
-footer ul li a:hover {
-    color: #ccc; /* Lighter color on hover */
+/* Style each social media icon */
+.social-icons i {
+    font-size: 24px;
+    color: whitesmoke;
+    margin: 0 5px; /* Add margin horizontally between each icon */
 }
 
 
