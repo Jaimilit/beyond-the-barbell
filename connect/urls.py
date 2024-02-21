@@ -6,5 +6,6 @@ urlpatterns = [
     path('reviews/', views.reviews, name='reviews'),
     path('newsletter/', views.newsletter, name='newsletter'),
     path('private_policy/', views.private_policy, name='private_policy'),
+    path('submit-review/', views.submit_review, name='submit_review'),
 
 ]

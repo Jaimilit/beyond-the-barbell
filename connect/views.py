@@ -35,8 +35,9 @@ def reviews(request):
     return render(request, 'reviews.html', context)
 
 def submit_review(request):
+    form = ReviewForm(request.POST or None)  # Initialize the form with request.POST data if it exists
+    context = {'form': form}
     if request.method == 'POST':
-        form = ReviewForm(request.POST)  
         if form.is_valid():
             review = form.save(commit=False)
             review.save()
@@ -44,9 +45,7 @@ def submit_review(request):
             return redirect(reverse('reviews'))
         else:
             messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
-    else:
-        form = ReviewForm()  
-    return render(request, 'reviews.html', {'form': form})
+    return render(request, 'reviews.html', context)
 
 
 def newsletter(request):
