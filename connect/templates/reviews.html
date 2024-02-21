@@ -29,7 +29,7 @@
                             <h3 class="booking-header">Write a Review</h3> 
                         </div>
                         <div class="col-md-12">
-                            <form method="POST" action="{% url 'submit_review' %}">
+                            <form method="POST">
                                 {% csrf_token %}
                                 {{ form|crispy }}                                     
                                 <button type="submit" class="btn btn-dark mt-3">Submit</button>
@@ -43,9 +43,10 @@
                         <ul class="list-group">
                             {% for review in reviews %}
                                 <li class="list-group-item">
-                                    <h4>{{ review.title }}</h4>
-                                    <p>{{ review.content }}</p>
-                                    <p>Rating: {{ review.rating }}</p>
+                                    <p><strong>Title: </strong>{{ review.title }}</p>
+                                    <p><strong>Trainer: </strong>{{ review.trainer }}</p>
+                                    <p><strong>Review: </strong>{{ review.content }}</p>
+                                    <p><strong>Rating: </strong>{{ review.rating }}</p>
                                 </li>
                             {% endfor %}
                         </ul>

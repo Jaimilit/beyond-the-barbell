@@ -29,14 +29,15 @@ def contact(request, *args, **kwargs):
 
     return render(request, 'contact_us.html', {'form': form})
 
+"""
 def reviews(request):
     reviews = TrainerReview.objects.all()
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
 
+
 def submit_review(request):
     form = ReviewForm(request.POST or None)  # Initialize the form with request.POST data if it exists
-    context = {'form': form}
     if request.method == 'POST':
         if form.is_valid():
             review = form.save(commit=False)
@@ -45,7 +46,23 @@ def submit_review(request):
             return redirect(reverse('reviews'))
         else:
             messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
-    return render(request, 'reviews.html', context)
+    return render(request, 'reviews.html', {'form': form})
+"""
+
+def submit_review(request):
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)  
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.save()
+            messages.success(request, 'Thank you for your review!')
+            return redirect(reverse('reviews'))
+        else:
+            messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
+    else:
+        form = ReviewForm()  # If it's a GET request, initialize an empty form
+    return render(request, 'reviews.html', {'form': form})
+
 
 
 def newsletter(request):
