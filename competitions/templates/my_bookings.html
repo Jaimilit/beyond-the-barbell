@@ -26,7 +26,9 @@
                 <div class="booking">
                     <div class="col-md-8 mt-3 offset-md-2">
                         <div class="booking-header">
-                            <h3>Hello {{ request.user.username }}! These are your current bookings:</h3>
+                            <h3>Hello {{ request.user.username }}! 
+                                <br>
+                                These are your current competitions:</h3>
                         </div>
                         <ul class="list-group">
                             {% for booking in user_bookings %}
