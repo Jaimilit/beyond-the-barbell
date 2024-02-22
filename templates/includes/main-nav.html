@@ -1,32 +1,29 @@
-
-        <div class="collapse navbar-collapse" id="main-nav">
-            <ul class="navbar-nav w-auto mx-auto">
-                <li class="nav-item dropdown">
-                    <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        All Products
-                    </a>
-                    <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-                        <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                        <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
-                        <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
-                        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
-                    </div>
-                </li>
-       
+<div class="collapse navbar-collapse" id="main-nav">
+    <ul class="navbar-nav w-auto mx-auto">
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All Products
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+                <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
+                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item">By Rating</a>
+                <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item">By Category</a>
+                <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+            </div>
+        </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="train" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="train" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Train with Us
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="train-with-us">
                 <a href="{% url 'products' %}?category=subscription" class="dropdown-item">Memberships</a>
                 <a href="{% url 'products' %}?category=personal_training" class="dropdown-item">Personal Training Sessions</a>
-        
             </div>
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-black mr-5" href="#" id="products" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="products" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Webshop
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="products">
@@ -44,19 +41,19 @@
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
                 <a href="{% url 'competitions' %}" class="dropdown-item">Join a Competition</a>
                 <a href="{% url 'my_bookings' %}" class="dropdown-item">My Competitions</a>
-
             </div>
         </li>
-            <li class="nav-item dropdown">
-                <a class="logo-font font-weight-bold nav-link text-black" href="#" id="specials-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Connect With Us
-                </a>
-                <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                    <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
-                    <a href="{% url 'reviews' %}" class="dropdown-item">Reviews</a> 
-                    <a href="{% url 'newsletter' %}" class="dropdown-item">Newsletter</a> 
-                    <a href="{% url 'private_policy' %}" class="dropdown-item">Private Policy</a> 
-                </div>
-            </li>
+
+        <li class="nav-item dropdown">
+            <a class="logo-font font-weight-bold nav-link text-black" href="#" id="connect-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Connect With Us
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="connect-link">
+                <a href="{% url 'contact' %}" class="dropdown-item">Contact Us</a>
+                <a href="{% url 'reviews' %}" class="dropdown-item">Reviews</a>
+                <a href="{% url 'newsletter' %}" class="dropdown-item">Newsletter</a>
+                <a href="{% url 'private_policy' %}" class="dropdown-item">Private Policy</a>
+            </div>
+        </li>
     </ul>
 </div>

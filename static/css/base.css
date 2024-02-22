@@ -57,24 +57,16 @@ body {
     border: 1px solid black !important;
 }
 
-#topnav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-}
-
 #topnav ul {
     display: flex;
-    justify-content: flex-end; /* Align items to the right */
     list-style-type: none; /* Remove bullet points */
-    padding: 0; /* Remove default padding */
+    padding: 5px; /* Remove default padding */
 }
 
 #topnav ul li {
-    margin-left: 5px; /* Add spacing between list items */
+    margin-right: 25px; /* Increase the margin to create more spacing between items */
 }
+
 
 
 /* Adjust the styles for links inside list items */
