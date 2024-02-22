@@ -36,8 +36,9 @@
                             <img src="{{ competition.image.url }}" class="img-fluid" alt="{{ competition.title }}">
                         </div>
                         <div class="col-md-2 text-center">
-                            <form method="POST" action="{% url 'book_competition' competition.id %}">
+                            <form method="post">
                                 {% csrf_token %}
+                                <input type="hidden" name="competition_id" value="{{ competition.id }}">
                                 <button type="submit" class="btn btn-dark mt-3">Join Competition</button>
                             </form>
                         </div>

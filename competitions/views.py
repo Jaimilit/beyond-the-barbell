@@ -11,6 +11,21 @@ from profiles.models import UserProfile
 @login_required
 def competitions(request):
     """ A view to render a list of competitions """
+    if request.method == 'POST':
+        competition_id = request.POST.get('competition_id')
+        competition = get_object_or_404(Competition, id=competition_id)
+        user_profile = request.user.userprofile
+        
+        # Check if the user has already booked this competition
+        existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
+        if existing_booking:
+            messages.warning(request, 'You have already booked this competition.')
+        else:
+            booking = Booking(user_profile=user_profile, competition=competition)
+            booking.save()
+            messages.success(request, 'Booking is confirmed.')
+            return redirect('my_bookings')
+    
     competitions = Competition.objects.all()
     return render(request, 'competitions.html', {'competitions': competitions})
 
