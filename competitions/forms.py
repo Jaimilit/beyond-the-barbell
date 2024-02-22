@@ -16,4 +16,6 @@ class BookingForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
+        self.fields['competition'].queryset = Competition.objects.all()
+
 

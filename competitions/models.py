@@ -26,7 +26,7 @@ class Booking(models.Model):
 
     def __str__(self):
         return (
-            f"{self.user.username} booked {self.competition.title} "
+            f"{self.user_profile.username} booked {self.competition.title} "
         )
 
     def save(self, *args, **kwargs):

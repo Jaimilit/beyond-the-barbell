@@ -1,18 +1,4 @@
 {% extends "base.html" %}
-{% load static %}
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
-{% endblock %}
-
-{% block extra_css %}
-    <link rel="stylesheet" href="{% static 'competitions/css/competitions.css' %}">
-{% endblock %}
-
 {% block content %}
 <div class="container">
     <div class="booking">
@@ -27,9 +13,12 @@
                         <p><strong>Title:</strong> {{ booking.competition.title }}</p>
                         <p><strong>Description:</strong> {{ booking.competition.description }}</p>
                     </div>
-                    <a href="{% url 'delete_booking' booking.id %}" class="card-link btn btn-danger mt-3 mb-3">
-                        <i class="fa-solid fa-pen-to-square"></i> Delete
-                    </a>
+                    <form action="{% url 'delete_booking' booking.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="card-link btn btn-danger mt-3 mb-3">
+                            <i class="fa-solid fa-pen-to-square"></i> Delete
+                        </button>
+                    </form>
                 </li>
                 {% empty %}
                 <li class="list-group-item">No bookings found.</li>
