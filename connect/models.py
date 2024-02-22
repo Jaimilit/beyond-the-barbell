@@ -16,6 +16,9 @@ class Contact(models.Model):
         ordering = ['-date']
 
 
+STATUS = ((0, "Draft"), (1, "Published"))
+
+
 class TrainerReview(models.Model):
     trainer = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
@@ -29,6 +32,8 @@ class TrainerReview(models.Model):
     ]
     rating = models.IntegerField(choices=RATING_CHOICES)
     date_posted = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
+
 
     def __str__(self):
         return self.title

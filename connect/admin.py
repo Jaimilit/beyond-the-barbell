@@ -28,6 +28,12 @@ class TrainerReviewAdmin(admin.ModelAdmin):
         for obj in queryset:
             obj.delete()
         self.message_user(request, "Selected reviews were successfully deleted.")
+        actions = ['approve_trainer_review']
+
+    def approve_trainer_review(self, request, queryset):
+        queryset.update(approved=True)
 
     # Customize the display name for the action
     delete_review.short_description = "Delete selected reviews"
+
+   
