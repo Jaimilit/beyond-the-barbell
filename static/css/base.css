@@ -13,6 +13,7 @@ body {
     min-height: 100vh; 
 }
 
+
 /* from Bulma */
 .icon {
     align-items: center;
@@ -70,6 +71,8 @@ body {
 
 
 /* Adjust the styles for links inside list items */
+
+
 #topnav ul li a {
     text-decoration: none;
     color: #555;
@@ -230,6 +233,8 @@ input[name='q']::placeholder {
   .container {
     max-width: 80%;
   }
+
+ 
 }
 
 /* Allauth form formatting */
