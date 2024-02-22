@@ -20,7 +20,14 @@ class TrainerReview(models.Model):
     trainer = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     content = models.TextField()
-    rating = models.IntegerField()
+    RATING_CHOICES = [
+        (1, '1 star'),
+        (2, '2 stars'),
+        (3, '3 stars'),
+        (4, '4 stars'),
+        (5, '5 stars'),
+    ]
+    rating = models.IntegerField(choices=RATING_CHOICES)
     date_posted = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

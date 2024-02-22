@@ -41,3 +41,23 @@
     line-height: 1.6;
     color: #333; /* Text color */
 }
+
+.trainer-one {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    background: url('/media/trainer/jaimi.jpeg'); 
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Adjust background position as needed */
+    text-align: center; /* Center text horizontally */
+    line-height: 200px; /* Center text vertically */
+}
+
+.trainer-two {
+    width: 200px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    background-image: url('path_to_your_image/trainer_two_image.jpg'); /* Replace 'path_to_your_image/trainer_two_image.jpg' with the path to your image */
+    background-size: cover; /* Adjust background size as needed */
+    background-position: center; /* Adjust background position as needed */
+    text-align: center; /* Center text horizontally */
+    line-height: 200px; /* Center text vertically */
+}
