@@ -14,22 +14,30 @@ def competitions(request):
     competitions = Competition.objects.all()
     return render(request, 'competitions.html', {'competitions': competitions})
 
-
 @login_required
 def booking(request, competition_id):
     """View for booking a specific competition"""
     competition = get_object_or_404(Competition, id=competition_id)
+    user_profile = request.user.userprofile
+    
+    # Check if the user has already booked this competition
+    existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
+    if existing_booking:
+        messages.warning(request, 'You have already booked this competition.')
+        return redirect('my_bookings')
+    
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
             booking = form.save(commit=False)
-            booking.user_profile = request.user.userprofile
-            booking.competition = competition  # Assign the competition to the booking
+            booking.user_profile = user_profile
+            booking.competition = competition
             booking.save()
             messages.success(request, 'Booking is confirmed.')
             return redirect('my_bookings')
     else:
         form = BookingForm()
+    
     return render(request, 'booking.html', {'form': form, 'competition': competition})
 
 
@@ -49,22 +57,3 @@ def delete_booking(request, booking_id):
         messages.success(request, 'Booking deleted successfully.')
     return redirect('my_bookings')
 
-
-"""
-@login_required
-def booking(request, competition_id):
-    View for booking a specific competition
-    competition = get_object_or_404(Competition, id=competition_id)
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            booking = form.save(commit=False)
-            booking.user_profile = request.user.userprofile
-            booking.competition = competition  # Assign the competition to the booking
-            booking.save()
-            messages.success(request, 'Booking is confirmed.')
-            return redirect('my_bookings')
-    else:
-        form = BookingForm()
-    return render(request, 'booking.html', {'form': form, 'competition': competition})
-    """
