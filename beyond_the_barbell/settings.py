@@ -41,6 +41,7 @@ ALLOWED_HOSTS = [
     'localhost',
 ]
 
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Application definition
 
