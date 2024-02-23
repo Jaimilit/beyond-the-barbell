@@ -64,3 +64,9 @@ select option[value=""] {
     margin: 0;
     height: 100%;
 }
+
+@media (max-width: 775px) {
+    .container {
+        margin-top: 50px; /* Adjust margin-top as needed to push content down */
+    }
+}

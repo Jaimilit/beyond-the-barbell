@@ -381,3 +381,9 @@ input[name='q']::placeholder {
     }
 }
 }
+
+@media (max-width: 775px) {
+    .container {
+        margin-top: 50px; /* Adjust margin-top as needed to push content down */
+    }
+}
