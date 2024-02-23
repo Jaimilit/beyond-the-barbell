@@ -14,9 +14,11 @@ from pathlib import Path
 import os
 import dj_database_url
 
-import os
-if os.path.exists("env.py"):
-  import env
+#if os.path.exists("env.py"):
+ # import env
+
+if os.path.isfile('env.py'):
+    import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -29,9 +31,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = 'DEVELOPMENT' in os.environ
 #DEBUG = True
-DEBUG = False
+#DEBUG = False
 
 ALLOWED_HOSTS = [
     '8000-jaimilit-beyondthebarbe-soa2wsirv6t.ws-eu108.gitpod.io',
