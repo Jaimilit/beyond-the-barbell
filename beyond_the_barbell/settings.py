@@ -19,7 +19,7 @@ if os.path.exists("env.py"):
   import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = 'DEVELOPMENT' in os.environ
-DEBUG = True
+DEBUG = 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-jaimilit-beyondthebarbe-soa2wsirv6t.ws-eu108.gitpod.io',
