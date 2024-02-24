@@ -1,33 +1,23 @@
 {% extends "base.html" %}
 {% load static %}
-
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
-    </div>
+<div class="container header-container">
+   <div class="row">
+      <div class="col"></div>
+   </div>
+</div>
 {% endblock %}
-
 {% block content %}
 <div class="container-fluid h-100 join-box-container">
-    <div class="row h-100 align-items-center">
-        <div class="col-12 col-md-6 my-auto mt-md-0">
-            <div class="text-center text-md-start">
-                <h1 class="display-4 logo-font text-black">
-                    Join Our Box
-                </h1>
-                <a href="{% url 'products' %}?category=subscription" class="btn btn-black rounded-pill">Join Now</a>
-
-            </div>
-        </div>
-    </div>
+   <div class="row h-100 align-items-center">
+      <div class="col-12 col-md-6 my-auto mt-md-0">
+         <div class="text-center text-md-start">
+            <h1 class="display-4 logo-font text-black">
+               Join Our Box
+            </h1>
+            <a href="{% url 'products' %}?category=subscription" class="btn btn-black rounded-pill">Join Now</a>
+         </div>
+      </div>
+   </div>
 </div>
-               
-                
-                
-            
-
-   
-    
 {% endblock %}
