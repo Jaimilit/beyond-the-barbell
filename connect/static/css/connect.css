@@ -61,3 +61,14 @@
     text-align: center; /* Center text horizontally */
     line-height: 200px; /* Center text vertically */
 }
+
+/* Mail Chimp*/
+
+
+#mc_embed_signup {
+    background: #fff;
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
+    width: 600px;
+}
+                             
