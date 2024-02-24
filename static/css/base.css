@@ -207,6 +207,10 @@ input[name='q']::placeholder {
     overflow-y: auto;
 }
 
+.product-container {
+    margin-bottom: 20px; /* Adjust this value as needed */
+}
+
 /* Footer Elements */
 
 .footer {

@@ -30,7 +30,8 @@
                </div>
                <ul class="list-group">
                   {% for booking in user_bookings %}
-                  <li class="list-group-item">
+                  <li class="list-group-item mb-3">
+                     <!-- Added mb-3 for margin bottom -->
                      <div class="booking-details">
                         <p><strong>Title:</strong> {{ booking.competition.title }}</p>
                         <p><strong>Description:</strong> {{ booking.competition.description }}</p>
