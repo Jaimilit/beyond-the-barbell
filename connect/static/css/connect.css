@@ -1,4 +1,6 @@
 /* Custom CSS for centering the competitions */
+
+
 .container-fluid {
     display: flex;
     justify-content: center;
@@ -24,51 +26,9 @@
 }
 
 
-.privacy-policy-content {
-    padding: 20px;
-    background-color: #f8f9fa; /* Gray background color */
-    border-radius: 10px;
-    margin-bottom: 20px; /* Add space between the content and footer */
-}
-
-.privacy-policy-content h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.privacy-policy-content p {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333; /* Text color */
-}
-
-.trainer-one {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    background: url('/media/trainer/jaimi.jpeg'); 
-    background-size: cover; /* Adjust background size as needed */
-    background-position: center; /* Adjust background position as needed */
-    text-align: center; /* Center text horizontally */
-    line-height: 200px; /* Center text vertically */
-}
-
-.trainer-two {
-    width: 200px; /* Adjust width as needed */
-    height: 200px; /* Adjust height as needed */
-    background-image: url('path_to_your_image/trainer_two_image.jpg'); /* Replace 'path_to_your_image/trainer_two_image.jpg' with the path to your image */
-    background-size: cover; /* Adjust background size as needed */
-    background-position: center; /* Adjust background position as needed */
-    text-align: center; /* Center text horizontally */
-    line-height: 200px; /* Center text vertically */
-}
-
-/* Mail Chimp*/
 
 
-#mc_embed_signup {
-    background: #fff;
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-    width: 600px;
-}
+
+
+
                              
