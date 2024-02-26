@@ -66,6 +66,9 @@ As a first time visitor, I want:
 * To be able to create an account and log out of a user account
 * To be able to purchase products, memberships, write reviews, contact us, & subscribe
 * To be able to receive confirmation of my actions via messages
+* To be able to pay via stripe service and receive free shipping if over 50 Euro
+* See link to facebook page in footer
+* Custom 404 page if there is an error
 
 
 Returning and frequent user goals
@@ -81,6 +84,10 @@ As a returning user, I want:
 * Receive confirmation of my actions via messages
 * Be able to make secure payments
 * To view my profile
+* To be able to pay via stripe service and receive free shipping if over 50 Euro
+* See link to facebook page in footer
+* Custom 404 page if there is an error
+
 
 Site Administrator goals
 
@@ -92,14 +99,23 @@ Site Administrator goals
 
 The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress.  In addition, labels were used to further define the priority of each user story in the Kanban board.
 
+The first thing I did was write the user stories I wanted my site to have. Then I created an out in wireframes of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
+
+SEO considerations implemented: meta description of content and key search words in head of code. sitemap.xml and robots.txt files are also included in the code.
+
+
 # Design and Structure
 
 The layout and design of this site was kept basic and simple. Minimal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. This website is meant to be functional and therefore I kept the color palette simple and something similiar to what you would see in an actual gym.  
 
+Fonts chosen to be easy to read and use.
+Favicons used in theme of fitness
+Forms use crispy templates
+
 
 ## Kanban Boards
 
-[Kanban Board](https://github.com/users/Jaimilit/projects/6) was used to create this project.
+[Kanban Board](https://github.com/users/Jaimilit/projects/6) was used to create this project. An MVP (Minimum Viable Product) was then designed around the requirements that most directly met the needs of each user story. These were then attached to iterations that were time-boxed using the ‘milestones’ feature in GitHub. 
 User Stories were moved through the process from To do >> In Progress >> Done on the Kanban Board.
 All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. Each user story was also linked to a milestone as well.
 
@@ -109,6 +125,8 @@ Here you can see my overview of my kanban board and moving items around as I was
 Here is an example and this one has the can see the labels and milestones connected to it.
 ![Kanban Boards Example](./media/kanbanexample.png)
 ![Kanban Boards Example](./media/kanbanmilestones.png)
+
+The scope of the project can be seen on the board, which I mainly limited to MVP requirements, each of which correlate with the Code Institute pass criteria for the project.
 
 
 ## Functional Structure
@@ -127,6 +145,8 @@ Train With Us: There are two options here: Memberships & Personal training sessi
 Competitions: You must be logged in to join a competition, but here users can see which competitions they are join. They can also view and delete their competitions as well.
 
 Connect With Us: Here users have a few different views: Contact Us, Reviews, Newsletter & Private Policy. The contact us page the user can complete a form to contact us. The reviews page a user can view personal training reviews and write their own review which will be approved by admin prior to posting. Users can also sign up for a newsletter, as well as view the private policy statement.
+
+Facebook Page: Created for this project aimed at continued growth of the website.
 
 
 # Wireframes
@@ -161,8 +181,8 @@ The site has been designed to be responsive and adapted for use on both desktop 
 
 ## Navigation Bar
 
-The navigation bar is present on all pages of the site. The nav bar as different sections:
-Navigation for an unauthorized user: All Products, Train With Us, Memberships, Competitions, Connect With Us, Account, & Checkout Bag.
+The navigation bar is present on all pages of the site. Responsive navigation offers different sections:
+Navigation for an unauthorized user: All Products, Train With Us, Memberships, Competitions, Connect With Us, Account, & Checkout Bag. 
 ![nav bar](./media/navigation.png)
 
 Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
@@ -200,10 +220,14 @@ Competition Booking Page - Where a user can view the competitions they are booke
 ![Competition Booking page](./media/competitionbooking.png)
 
 Connect With Us - This is where users can do severl things - contact us, read/write reviews, join newsletter, read the private policy.
+Contact us offers a fully functional form for the user to contact us.
 ![contact us page](./media/contactus.png)
+The Reviews Page the user can read reviews of personal trainers as well as write their own review. The review will need to be approved first by admin prior to posting.
 ![reviews page](./media/reviews.png)
+The newsletter - the user can full subscribe using MailChimp and let's the user know it was successful.
 ![newsletter page](./media/subscribe.png)
 ![newsletter joined page](./media/subscribemessage.png)
+The user can read the private policy - GDPR approved.
 ![private policy page](./media/privatepolicy.png)
 
 Profile Page - Where a user can complete their profile page:
@@ -228,7 +252,21 @@ Messages - Where users are informed of their actions
 ![Message Notifications page](./media/messagenotifications.png)
 
 Footer - Information that it was created by me plus appropriate links:
-![footer](./static/assets/images/features/footer.png)
+![footer](./media/footer.png)
+
+Facebook - Facebook page
+![Facebook Intro](./media/facebook1.png)
+![Facebook Post](./media/facebook2.png)
+![Facebook Info](./media/facebook3.png)
+[Facebook Page](https://www.facebook.com/profile.php?id=61556647505650)
+
+The same cover image is used as in the homepage for the company website. Consistency in the company colours and images makes the brand easier to recognise and remember.
+
+Users can be brought to this page by clicker the footer facebook image.
+
+Custom 404 Page for the user if there is an error
+![Custom404](./media/custom404.png)
+
 
 # Future Features
 
@@ -316,14 +354,16 @@ The site was constantly tested during the process of creating the site in the Gi
 | I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
 | I can see if a session has availability (max 20)  |  | X | Need to be authorized to do
 
-* Example of format error was not putting the different days in the right place. It was putting all the workouts under Monday which was the default. This was later recified.
-![Layout Format](./static/assets/images/bugs/bug-layout-gym-session.png)
+* Example of format error on smaller screens for the cart:
+![Cart Error](./media/carterror.jpg)
 
-* Example of format issue for the layout of the success page.
-![Layout Format for Success Page](./static/assets/images/bugs/bug-layout-success.png)
+* Example of format error for footer:
+![Footer Error](./media/footerissue.jpg)
 
-* Example of issues with functions between booking and booking_session not working correctly. Automated testing to fix issue.
-![Booking Issues](./static/assets/images/bugs/bug-testing.png)
+* Example of format margin on some of the webpages - this was a consistent issue
+![Margin Error](./media/marginissue.jpg)
+
+
 
 | Bug| Solution | 
 | ------- | ------- |  
