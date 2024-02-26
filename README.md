@@ -133,16 +133,22 @@ Connect With Us: Here users have a few different views: Contact Us, Reviews, New
 Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
 
 Homepage:
-![wireframes-homepage](./static/assets/images/wireframes/wireframes-homepage.png)
+![wireframes-homepage](./static/media/wfhomepage.png)
 
-Booking Page:
-![wireframes-bookingpage](./static/assets/images/wireframes/wireframes-bookingpage.png)
+Products:
+![wireframes-Webshop](./static/media/wfwebshop.png)
 
-Booking Successful/Delete Booking/Booking Already Made/Edit Booking:
-![wireframes-homepage](./static/assets/images/wireframes/wireframes-bookings.png)
+Train With Us:
+![wireframes-Train With Us](./static/media/wftrainwithus.png)
 
-Models for creating bookings:
-![wireframes-models](./static/assets/images/wireframes/models.png)
+Competitions:
+![wireframes-Challenges](./static/media/wfchallenges.png)
+
+Models:
+![wireframes-Models](./static/media/modelspage.png)
+
+Moscow:
+![wireframes-Moscow](./static/media/moscow.png)
 
 
 # Responsive Design
@@ -150,11 +156,75 @@ Models for creating bookings:
 The site has been designed to be responsive and adapted for use on both desktop and mobile devices. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
 ![responsive](./static/assets/images/validations/iamresponsive.png)
 
+# FEATURES
+
+## Navigation Bar
+
+The navigation bar is present on all pages of the site. The nav bar as different sections:
+Navigation for an unauthorized user: All Products, Train With Us, Memberships, Competitions, Connect With Us, Account, & Checkout Bag.
+![nav bar](./static/media/navigation.png)
+
+Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
+
+Navigation on Mobile:
+![nav on mobile](./static/media/navmobile.png)
+
+## Pages
+
+Registration Page - Where a user can sign up to use the platform:
+![registration](./media/registration)
+
+Sign-In Page - Where a returning user can log-in:
+![sign-in](./media/signinpage.png)
+
+Log Out Page - Where a user can log out. It asks for confirmation to log out: 
+![logout](./media/logout.png)
+
+Home Page - Where a user is first brought to on the site: 
+![home page](./media/homepage.png)
+
+Products Page - Where an authenicated user can view the bookings and choose a session to book: 
+![bookings](./static/assets/images/features/calendar-page.png)
+
+My Bookings Page - Where an authenticated user can view all their bookings. This is also ordered by day and then by time. They can choose to edit or delete each individual booking:
+![my bookings](./static/assets/images/features/my-bookings-page.png)
+
+Booking Successful - Where a user is informed that their booking was successful:
+![booking successful](./static/assets/images/features/booking-successful-page.png)
+
+Booking Aleady Made Page - Where a user is informed if they previously made their chosen booking: 
+![booked already](./static/assets/images/features/already-booked-page.png)
+
+Edit Booking Page - Where a user can edit a booking by adding a note:
+![edit booking](./static/assets/images/features/edit-booking.png)
+
+Delete Booking Page - Where a user can delete a booking after asking for confirmation if they want to delete the booking:
+![delete booking](./static/assets/images/features/delete-booking-page.png)
+
+No Bookings - Where a user is informed if they currently have no bookings:
+![no bookings](./static/assets/images/features/no-bookings-page.png)
+
+Booking Full - No more available spots for booking a specific workout session as the max is 20:
+![booking full](./static/assets/images/features/booking-full.png)
+
+Footer - Information that it was created by me plus appropriate links:
+![footer](./static/assets/images/features/footer.png)
+
+Main Admin Page - Main Admin page to create workouts and view bookings made:
+![admin-page](./static/assets/images/features/admin-page.png)
+
+Admin Workout - Where Admin created the workout sessions to be booked by users:
+![admin-workouts](./static/assets/images/features/admin-workouts.png)
+
+Admin Bookings - Where Admin can view the bookings made and deleted:
+![admin-bookings](./static/assets/images/features/admin-bookings.png)
+
 # Future Features
 
-* Page with information about the instructors
-* Create a user profile which the user can view 
-* A list where users can view all their previous bookings/attendance for classes
+* Page with information about the personal trainers
+* Page where user can view past competitions
+* Page where users can connect with other users
+
 
 # Technology Used:
 
@@ -184,7 +254,7 @@ The site has been designed to be responsive and adapted for use on both desktop 
 * [Pip3](https://pypi.org/project/pip/): To install Python modules and libraries
 * [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Requests for Python to understand
 * [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python
-* [Cloudinary](https://cloudinary.com/): The image hosting service used to upload images and other media
+* [AWS](https://aws.amazon.com/): The image hosting service used to upload images and other media
 * [Heroku](https://dashboard.heroku.com/apps): The hosting service used to host the website
 * [VSCode](https://code.visualstudio.com/): The IDE used to develop the website
 * [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): Was used to debug the website
@@ -298,13 +368,13 @@ During testing a few issues were identified and corrected:
 
 
 # Deployment
-I followed the below steps using the Code Institute tutorial. The project was first created in GitHub, then using the workspace in CodeAnywhere, and then in Gitpod again for most of the project. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
+I followed the below steps using the Code Institute tutorial. The project was first created in GitHub. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
 
 ## Github
 
 1. Create an account at GitHub or login to an existing account.
-2. Go to the GitHub repository for CrossFit-Signup.
-3. Click the 'Code' button and copy and paste code into Codeanywhere workspace or Gitpod workspace.
+2. Go to the GitHub repository for Beyond-the-Barbell.
+3. Click the 'Code' button and copy and paste code into Gitpod workspace.
 4. A copy of the repository will be available in your own workspace.
 
 ## Heroku
@@ -324,19 +394,22 @@ The structure and the code of the project was based on two walkthroughs by the C
 * Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
 [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
 * [Bootstrap Documenation](https://getbootstrap.com/)  was used to provide examples of Bootstrap functionality and building blocks.
-* [Code Institute WalkThroughs](https://codeinstitute.net/se/) "Hello Django" and "I Think Therefore I Blog" worked as inspiration and code examples.
+* [Code Institute WalkThroughs](https://codeinstitute.net/se/) "Boutique Ado" worked as inspiration and code examples.
 
 ## Content
 
 Information is fictional and created by me and I was inspired by my own CrossFit box 
-[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. Though this information is in Swedish. They use an app called [Wondr](https://wondr.cc/en-gb/home) in which members book their own CrossFit sessions for the week.
+[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. I also used
+[Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gymn as well.
+
+Though this information is in Swedish. 
 
 ## Media
 
-The one image was free to use from [Pexels](https://www.pexels.com/).
+My images were free to use from [Pexels](https://www.pexels.com/) and [Unsplash](https://www.unsplash.com/).
 
 ## Inspiration
 
-* This project was inspired by the "Hello Django" and the "I Think Therefore I Blog" projects from Code Institute.
- * Larisa LG's Readme.md file was used as a template for writing my own Readme.md.
- * CrossFit Fabriken website and Wondr App were used as inspiration for my app.
+* This project was inspired by the "Boutique" and other projects from Code Institute.
+ * Farah Maria's Readme.md file was used as a template for writing my own Readme.md.
+ * CrossFit Fabriken website was used as inspiration as well as Nordic Wellness.
