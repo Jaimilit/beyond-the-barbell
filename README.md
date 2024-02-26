@@ -134,22 +134,22 @@ Connect With Us: Here users have a few different views: Contact Us, Reviews, New
 Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
 
 Homepage:
-![wireframes-homepage](./static/media/wfhomepage.png)
+![wireframes-homepage](./media/wfhomepage.png)
 
 Products:
-![wireframes-Webshop](./static/media/wfwebshop.png)
+![wireframes-Webshop](./media/wfwebshop.png)
 
 Train With Us:
-![wireframes-Train With Us](./static/media/wftrainwithus.png)
+![wireframes-Train With Us](./media/wftrainwithus.png)
 
 Competitions:
-![wireframes-Challenges](./static/media/wfchallenges.png)
+![wireframes-Challenges](./media/wfchallenges.png)
 
 Models:
-![wireframes-Models](./static/media/modelspage.png)
+![wireframes-Models](./media/modelspage.png)
 
 Moscow:
-![wireframes-Moscow](./static/media/moscow.png)
+![wireframes-Moscow](./media/moscow.png)
 
 
 # Responsive Design
@@ -163,12 +163,12 @@ The site has been designed to be responsive and adapted for use on both desktop 
 
 The navigation bar is present on all pages of the site. The nav bar as different sections:
 Navigation for an unauthorized user: All Products, Train With Us, Memberships, Competitions, Connect With Us, Account, & Checkout Bag.
-![nav bar](./static/media/navigation.png)
+![nav bar](./media/navigation.png)
 
 Also, the navigation bar is an adaptive element, and on mobile screens it collapses into a hamburger icon.
 
 Navigation on Mobile:
-![nav on mobile](./static/media/navmobile.png)
+![nav on mobile](./media/navmobile.png)
 
 ## Pages
 
@@ -375,7 +375,7 @@ During testing a few issues were identified and corrected:
 
 ### Lighthouse
 
-![Lighthouse](./static/assets/images/validations/lighthouse-example.png)
+![Lighthouse](.media/lighthouse.png)
 
 
 # Deployment
