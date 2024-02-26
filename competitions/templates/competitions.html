@@ -26,17 +26,14 @@
                <div class="col-md-3 text-center">
                   <h5 class="card-title">{{ competition.title }}</h5>
                </div>
-               <div class="col-md-5">
+               <div class="col-md-6">
                   <p class="card-text">{{ competition.description }}</p>
-               </div>
-               <div class="col-md-2">
-                  <img src="{{ competition.image.url }}" class="img-fluid" alt="{{ competition.title }}">
                </div>
                <div class="col-md-2 text-center">
                   <form method="post">
                      {% csrf_token %}
                      <input type="hidden" name="competition_id" value="{{ competition.id }}">
-                     <button type="submit" class="btn btn-dark mt-3">Join Competition</button>
+                     <button type="submit" class="btn btn-dark mt-3 mb-3">Join Competition</button>                  
                   </form>
                </div>
             </div>
