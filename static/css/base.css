@@ -211,6 +211,10 @@ input[name='q']::placeholder {
     margin-bottom: 20px; /* Adjust this value as needed */
 }
 
+#signup_form {
+    margin-bottom: 20px;
+}
+
 /* Footer Elements */
 
 .footer {
