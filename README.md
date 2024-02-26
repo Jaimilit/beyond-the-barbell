@@ -107,7 +107,7 @@ Here you can see my overview of my kanban board and moving items around as I was
 ![Kanban Boards](./media/kanbanprogress.png)
 
 Here is an example and this one has the can see the labels and milestones connected to it.
-![Kanban Boards Example](./media/kananexample.png)
+![Kanban Boards Example](./media/kanbanexample.png)
 ![Kanban Boards Example](./media/kanbanmilestones.png)
 
 
@@ -143,7 +143,7 @@ Train With Us:
 ![wireframes-Train With Us](./media/wftrainwithus.png)
 
 Competitions:
-![wireframes-Challenges](./media/wfchallenges.png)
+![wireframes-Challenges](./media/wfchallengespage.png)
 
 Models:
 ![wireframes-Models](./media/modelspage.png)
@@ -173,7 +173,7 @@ Navigation on Mobile:
 ## Pages
 
 Registration Page - Where a user can sign up to use the platform:
-![registration](./media/registration)
+![registration](./media/registration.png)
 
 Sign-In Page - Where a returning user can log-in:
 ![sign-in](./media/signinpage.png)
@@ -194,7 +194,7 @@ Webshop Products - Where a user can view products by categories:
 ![Webshop](./media/webshopproducts.png)
 
 Competitions - Where a user can view competitions to join if they are signed up and logged in: 
-![Competitions page](./media/competitionbooking.png)
+![Competitions page](./media/joincomp.png)
 
 Competition Booking Page - Where a user can view the competitions they are booked and/or delete their bookings.
 ![Competition Booking page](./media/competitionbooking.png)
