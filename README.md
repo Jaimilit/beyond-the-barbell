@@ -99,15 +99,16 @@ The layout and design of this site was kept basic and simple. Minimal color was 
 
 ## Kanban Boards
 
-[Kanban Board](https://github.com/users/Jaimilit/projects/4) was used to create this project.
+[Kanban Board](https://github.com/users/Jaimilit/projects/6) was used to create this project.
 User Stories were moved through the process from To do >> In Progress >> Done on the Kanban Board.
 All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. Each user story was also linked to a milestone as well.
 
 Here you can see my overview of my kanban board and moving items around as I was working on them.
-![Kanban Boards](./static/assets/images/features/kanban-board.png)
+![Kanban Boards](./media/kanbanprogress.png)
 
-Here is an example and this one has the can see the labels and milestones connectewd to it.
-![Kanban Boards Example](./static/assets/images/features/kanban-example.png)
+Here is an example and this one has the can see the labels and milestones connected to it.
+![Kanban Boards Example](./media/kananexample.png)
+![Kanban Boards Example](./media/kanbanmilestones.png)
 
 
 ## Functional Structure
@@ -183,41 +184,51 @@ Log Out Page - Where a user can log out. It asks for confirmation to log out:
 Home Page - Where a user is first brought to on the site: 
 ![home page](./media/homepage.png)
 
-Products Page - Where an authenicated user can view the bookings and choose a session to book: 
-![bookings](./static/assets/images/features/calendar-page.png)
+Products Page - Where a user can view products to purchase: 
+![Products page](./media/allproducts.png)
 
-My Bookings Page - Where an authenticated user can view all their bookings. This is also ordered by day and then by time. They can choose to edit or delete each individual booking:
-![my bookings](./static/assets/images/features/my-bookings-page.png)
+Train With Us - Where a user can buy memberships & personal training subscriptions:
+![Train With Us](./media/trainwithus.png)
 
-Booking Successful - Where a user is informed that their booking was successful:
-![booking successful](./static/assets/images/features/booking-successful-page.png)
+Webshop Products - Where a user can view products by categories:
+![Webshop](./media/webshopproducts.png)
 
-Booking Aleady Made Page - Where a user is informed if they previously made their chosen booking: 
-![booked already](./static/assets/images/features/already-booked-page.png)
+Competitions - Where a user can view competitions to join if they are signed up and logged in: 
+![Competitions page](./media/competitionbooking.png)
 
-Edit Booking Page - Where a user can edit a booking by adding a note:
-![edit booking](./static/assets/images/features/edit-booking.png)
+Competition Booking Page - Where a user can view the competitions they are booked and/or delete their bookings.
+![Competition Booking page](./media/competitionbooking.png)
 
-Delete Booking Page - Where a user can delete a booking after asking for confirmation if they want to delete the booking:
-![delete booking](./static/assets/images/features/delete-booking-page.png)
+Connect With Us - This is where users can do severl things - contact us, read/write reviews, join newsletter, read the private policy.
+![contact us page](./media/contactus.png)
+![reviews page](./media/reviews.png)
+![newsletter page](./media/subscribe.png)
+![newsletter joined page](./media/subscribemessage.png)
+![private policy page](./media/privatepolicy.png)
 
-No Bookings - Where a user is informed if they currently have no bookings:
-![no bookings](./static/assets/images/features/no-bookings-page.png)
+Profile Page - Where a user can complete their profile page:
+![My Pofile page](./media/myprofile.png)
 
-Booking Full - No more available spots for booking a specific workout session as the max is 20:
-![booking full](./static/assets/images/features/booking-full.png)
+Add to Cart - Where a user can add a product to their cart:
+![Add to Cart page](./media/addtocart.png)
+
+Shopping Bag - User can view their shopping bag/cart:
+![Shopping Bag page](./media/shoppingbag.png)
+
+Check Out - User can go to checkout to buy their products:
+![Check Out page](./media/checkout.png)
+
+Order Success - User is informed that their order was successful:
+![Order page](./media/ordersuccess.png)
+
+Edit or Delete Product - Where Admin can edit and delete products:
+![Edit or Delete Product page](./media/editanddeleteproducts.png)
+
+Messages - Where users are informed of their actions
+![Message Notifications page](./media/messagenotifications.png)
 
 Footer - Information that it was created by me plus appropriate links:
 ![footer](./static/assets/images/features/footer.png)
-
-Main Admin Page - Main Admin page to create workouts and view bookings made:
-![admin-page](./static/assets/images/features/admin-page.png)
-
-Admin Workout - Where Admin created the workout sessions to be booked by users:
-![admin-workouts](./static/assets/images/features/admin-workouts.png)
-
-Admin Bookings - Where Admin can view the bookings made and deleted:
-![admin-bookings](./static/assets/images/features/admin-bookings.png)
 
 # Future Features
 
