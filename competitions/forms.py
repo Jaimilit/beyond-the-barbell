@@ -15,21 +15,3 @@ class BookingForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['competition'].queryset = Competition.objects.all()
-
-
-"""
-class BookingForm(forms.ModelForm):
-    Create form for booking for user for competition
-    class Meta:
-        model = Booking
-        fields = '__all__'
-        labels = {
-            'competition': 'competition',
-        }
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['competition'].queryset = Competition.objects.all()
-
-
-"""
