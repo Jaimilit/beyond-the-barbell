@@ -363,7 +363,7 @@ The site was constantly tested during the process of creating the site in the Gi
 * Example of format margin on some of the webpages - this was a consistent issue
 ![Margin Error](./media/marginissue.jpg)
 
-
+Issue with email for gmail to use for Mail Chimp - needed runtime file
 
 | Bug| Solution | 
 | ------- | ------- |  
@@ -392,18 +392,6 @@ The website CSS style has successfully passed the W3C Jigsaw CSS Validation Serv
 ### Python Validation (PEP8)
 All Python code was manually checked using CI Python Linter. The Linter reports had messages about exceeding the string length of 79 characters, which have been fixed. Re-testing did not reveal any errors.
 
-* urls.py
-![urs.py](./static/assets/images/validations/urls-linter.png)
-* urls.py for signup
-![urs.py](./static/assets/images/validations/linter-urls-signup.png)
-* models.py
-![models.py](./static/assets/images/validations/linter-models.png)
-* forms.py
-![forms.py](./static/assets/images/validations/linter-forms.png)
-* views.py
-![views.py](./static/assets/images/validations/linter-views.png)
-* admin.py
-![admin.py](./static/assets/images/validations/linter-admin.png)
 
 During testing a few issues were identified and corrected:
 
@@ -426,14 +414,14 @@ I followed the below steps using the Code Institute tutorial. The project was fi
 1. Create an account at GitHub or login to an existing account.
 2. Go to the GitHub repository for Beyond-the-Barbell.
 3. Click the 'Code' button and copy and paste code into Gitpod workspace.
-4. A copy of the repository will be available in your own workspace.
+4. A copy of the repository will be available in your own workspace on GitPod.
 
 ## Heroku
 The site is deployed to Heroku through the following steps:
 
 1. Log in to Heroku or create an account, if required. On the Welcome page in the top right corner click the button labeled 'New'.
 2. From the drop-down menu select 'Create new app'. Enter a preferred app name. Select the relevant geographical region. Click to 'Create App'.
-3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter 'PORT' for the key and '8000' for the value. Then click 'Add'. Add CLOUDINARY_URL, DATABASE_URL and SECRET_KEY. URL variable values ​​must be copied from your [CLOUDINARY](https://cloudinary.com/) account and [ElephantSQL](https://www.elephantsql.com/) account. To create a SECRET KEY, use the online service or come up with your own.
+3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter keys with appropiate values for the following: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DATABASE_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, SECRET_KEY, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET, & USE_AWS. These were copied from AWS, Stripe, Gmail, and ElephantSQL.
 4. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
 5. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
 
