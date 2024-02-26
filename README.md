@@ -439,16 +439,15 @@ The structure and the code of the project was based on two walkthroughs by the C
 
 Information is fictional and created by me and I was inspired by my own CrossFit box 
 [CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. I also used
-[Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gymn as well.
-
-Though this information is in Swedish. 
+[Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gymn as well. Though the information is in Swedish. 
 
 ## Media
 
-My images were free to use from [Pexels](https://www.pexels.com/) and [Unsplash](https://www.unsplash.com/).
+All images were free to use from [Pexels](https://www.pexels.com/) and [Unsplash](https://www.unsplash.com/).
 
 ## Inspiration
 
-* This project was inspired by the "Boutique" and other projects from Code Institute.
- * Farah Maria's Readme.md file was used as a template for writing my own Readme.md.
- * CrossFit Fabriken website was used as inspiration as well as Nordic Wellness.
+* This project was inspired by the "Boutique Ado" and other projects from Code Institute.
+* I wanted to keep the same theme for many of my project - the theme of CrossFit which I have done for many of my projects. 
+* Farah Maria's Readme.md file was used as a template for writing my own Readme from project 4.
+* CrossFit Fabriken website was used as inspiration as well as Nordic Wellness website for CrossFit boxes.
