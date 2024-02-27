@@ -343,20 +343,20 @@ Custom 404 Page for the user if there is an error:
 Products are what is the main focus of the e-commerce website. Admin can add, edit, and delete a product, add related image, and descriptions - as well as competitions and reviews.
 
 CRUD
-Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join as well as reviews of personal trainers.
-Read: All users can view all the product and read about them in the product navbar. All users can read the competitions offered and read reviews of personal trainers.
-Update: Only admin can update the products and competitions.
-Delete: Only admin can delete the products, competitions, & reviews.
+*Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join as well as reviews of personal trainers.
+*Read: All users can view all the product and read about them in the product navbar. All users can read the competitions offered and read reviews of personal trainers.
+*Update: Only admin can update the products and competitions.
+*Delete: Only admin can delete the products, competitions, & reviews.
 
 ## Reviews
 
 Users can leave a review about personal training.
 
 CRUD
-Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
-Read: All users, even those who are not logged in, can read all reviews written about the personal trainer.
-Update: Only the admin can update review - but users can contact admin via the contact form.
-Delete: Only the admin can approve and post or delete a review.
+*Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
+*Read: All users, even those who are not logged in, can read all reviews written about the personal trainer.
+*Update: Only the admin can update review - but users can contact admin via the contact form.
+*Delete: Only the admin can approve and post or delete a review.
 
 # Testing
 
@@ -392,7 +392,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first|
 | Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
-| Issue of admin approval not working prior to posting | |
+| Issue of admin approval not working prior to posting | In my models I forgot the approval field so that once in admin I could change it to true|
 
 * Example of format error on smaller screens for the cart:
 ![Cart Error](./media/carterror.jpg)
@@ -453,72 +453,108 @@ All work passed with the exeception of a few lines that were too long. However, 
 
 ### Lighthouse
 
-![Lighthouse](./media/lighthouse./png)
+![Lighthouse](./media/lighthouse.png)
 
 ### Python Linters
 
-Bag APP
+Bag App
 
+Bag Tools:
 ![Bag Tools](./media/bagbagtools.png)
+Bag Contexts:
 ![Bag Contexts](./media/bagcontexts.png)
+Bag Urls:
 ![Bag Urls](./media/bagurls.png)
+Bag Views:
 ![Bag Views](./media/bagviews.png)
 
-Products APP
+Products App
 
+Product Admin:
 ![Products Admin](./media/productsadmin.png)
+Product Forms:
 ![Products Forms](./media/productsforms.png)
+Product Models:
 ![Products Models](./media/productsmodels.png)
+Product Views:
 ![Products Views](./media/productsviews.png)
+Product Widgets:
 ![Products Widgets](./media/productswidgets.png)
+Product Urls: 
 ![Products Urls](./media/productsurls.png)
 
-Checkout APP
+Checkout App
 
+Checkout Admin:
 ![Checkout Admin](./media/checkoutadmin.png)
+Checkout Forms:
 ![Checkout Forms](./media/checkoutforms.png)
+Checkout Models:
 ![Checkout Models](./media/checkoutmodels.png)
+Checkout Views:
 ![Checkout Views](./media/checkoutviews.png)
+Checkout Urls:
 ![Checkout Urls](./media/checkouturls.png)
+Checkout Signals:
 ![Checkout Signals](./media/checkoutsignals.png)
+Checkout Webhook Handler:
 ![Checkout Webhook Handler](./media/checkoutwebhookhandler.png)
+Checkout Webhooks:
 ![Checkout Webhooks](./media/checkoutwebhooks.png)
 
 
-Profile APP
+Profile App
 
+Profile Custom Storage:
 ![Profile Custom Storage ](./media/profilecustomstorages.png)
+Profile Forms:
 ![Profile Forms](./media/profileforms.png)
+Profile Models:
 ![Profile Models](./media/profilemodels.png)
+Profile Views:
 ![Profile Views](./media/profileviews.png)
+Profile Urls:
 ![Profile Urls](./media/profileurls.png)
 
-Home APP
+Home App
 
+Home Views:
 ![Home Views](./media/homeviews.png)
+Home Urls:
 ![Home Urls](./media/homeurls.png)
 
-Competitions APP
+Competitions App
 
+Competition Admin:
 ![Competition Admin](./media/competitionadmin.png)
+Competition Forms:
 ![Competition Forms](./media/competitionforms.png)
+Competition Models:
 ![Competition Models](./media/competitionmodels.png)
+Competition Views:
 ![Competition Views](./media/competitionviews.png)
+Competition Urls:
 ![Competition Urls](./media/competitionurls.png)
 
-Connect APP
+Connect App
 
+Connect Admin:
 ![Connect Admin](./media/connectadmin.png)
+Connect Forms:
 ![Connect Forms](./media/connectforms.png)
+Connect Models:
 ![Connect Models](./media/connectmodels.png)
+Connect Views:
 ![Connect Views](./media/connectviews.png)
+Connect Urls:
 ![Connect Urls](./media/connecturls.png)
 
-Beyond the Barbell APP
+Beyond the Barbell App
 
+Beyond the Barbell Views:
 ![Beyond the Barbell Views](./media/bbviews.png)
+Beyond the Barbell Urls:
 ![Beyond the Barbell Urls](./media/bburls.png)
-
 
 
 
