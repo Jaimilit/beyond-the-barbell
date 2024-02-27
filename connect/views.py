@@ -36,7 +36,7 @@ def submit_review(request):
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.save()  # Save the review as draft
+            review.save()  
             messages.success(request, 'Thank you for your review! It will be published after admin approval.')
             return redirect(reverse('reviews'))
         else:
@@ -45,34 +45,12 @@ def submit_review(request):
         form = ReviewForm()
     return render(request, 'submit_review.html', {'form': form})
 
+
 def reviews(request):
     """ View to display reviews """
-    reviews = TrainerReview.objects.filter(approved=True)  # Only approved reviews are shown
+    reviews = TrainerReview.objects.filter(approved=True)  
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
-
-"""   
-def reviews(request):
-    reviews = TrainerReview.objects.all()
-    context = {'reviews': reviews}
-    return render(request, 'reviews.html', context)
-
- 
-def submit_review(request):
-    if request.method == 'POST':
-        form = ReviewForm(request.POST)
-        if form.is_valid():
-            review = form.save()
-            messages.success(request, 'Thank you for your review!')
-            return redirect(reverse('reviews'))
-        else:
-            messages.error(request, 'Oops! There is an error with your review.'
-                           'Please check your details and try again.')
-    else:
-        form = ReviewForm()
-    return render(request, 'submit_review.html', {'form': form})
-
-"""
 
 
 def newsletter(request):
