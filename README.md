@@ -408,7 +408,6 @@ The site was constantly tested during the process of creating the site in the Gi
 ### Manual Testing of Features and Goals for the Project
 
 ![Navigation](.media/testingnav.png)
-![Navigation](.media/testingnav.png)
 ![Registration](.media/testingreg.png)
 ![Profile](.media/testingprofile.png)
 ![Sorting](.media/testingsorting.png)
@@ -442,8 +441,8 @@ During testing a few issues were identified and corrected:
 
 All work passed with the exeception of a few lines that were too long. However, these lines were from the Boutique Ado walkthrough and; therefore, I thought it was ok to leave as this is the example my work was based upon.
 
-* 404 page created if there's any errors
-![Custom 404](.media/custom404.png)
+* 404 page created if there's any errors:
+![Custom404](./media/custom404.png)
 
 * User does not have access to Product Management unless a super user/admin
 ![No Product Management](.media/noproductmg.png)
