@@ -1,5 +1,7 @@
 Beyond the Barbell
 
+![responsive](./media/amiresponsive.png)
+
 The deployed app: [Heroku](https://beyond-the-barbell-0789d667f147.herokuapp.com/)
 
 GitHub Repository: [GitHub](https://github.com/Jaimilit/beyond-the-barbell)
@@ -68,7 +70,7 @@ As a first time visitor, I want:
 * To be able to receive confirmation of my actions via messages
 * To be able to pay via stripe service and receive free shipping if over 50 Euro
 * See link to facebook page in footer
-* Custom 404 page if there is an error
+* To view custom 404 page if there is an error
 
 
 Returning and frequent user goals
@@ -86,20 +88,20 @@ As a returning user, I want:
 * To view my profile
 * To be able to pay via stripe service and receive free shipping if over 50 Euro
 * See link to facebook page in footer
-* Custom 404 page if there is an error
+* To view custom 404 page if there is an error
 
 
 Site Administrator goals
 
 * As a Site Administrator I would like to be able to add, edit, & delete products
-* As a Site Administrator I can approve reviews written
-* As a Site Administrator I can update competitions
+* As a Site Administrator I can approve reviews written prior to posting
+* As a Site Administrator I can update, edit, & delete competitions
 
 ## Agile Tools
 
-The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress.  In addition, labels were used to further define the priority of each user story in the Kanban board.
+The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress. In addition, labels were used to further define the priority of each user story in the Kanban board.
 
-The first thing I did was write the user stories I wanted my site to have. Then I created an out in wireframes of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
+The first thing I did was write the user stories I wanted my site to have. Then I created an outline in wireframes of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
 
 SEO considerations implemented: meta description of content and key search words in head of code. sitemap.xml and robots.txt files are also included in the code.
 
@@ -108,16 +110,14 @@ SEO considerations implemented: meta description of content and key search words
 
 The layout and design of this site was kept basic and simple. Minimal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. This website is meant to be functional and therefore I kept the color palette simple and something similiar to what you would see in an actual gym.  
 
-Fonts chosen to be easy to read and use.
+Fonts chosen to be easy to read and use
 Favicons used in theme of fitness
 Forms use crispy templates
 
 
 ## Kanban Boards
 
-[Kanban Board](https://github.com/users/Jaimilit/projects/6) was used to create this project. An MVP (Minimum Viable Product) was then designed around the requirements that most directly met the needs of each user story. These were then attached to iterations that were time-boxed using the ‘milestones’ feature in GitHub. 
-User Stories were moved through the process from To do >> In Progress >> Done on the Kanban Board.
-All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. Each user story was also linked to a milestone as well.
+[Kanban Board](https://github.com/users/Jaimilit/projects/6) was used to create this project. An MVP (Minimum Viable Product) was then designed around the requirements that most directly met the needs of each user story. These were then attached to iterations that were time-boxed using the ‘milestones’ feature in GitHub. User Stories were moved through the process from To do >> In Progress >> Done on the Kanban Board. All User Stories were prioritized: Must Have, Should Have, & Would Like to Have. Each user story was also linked to a milestone as well.
 
 Here you can see my overview of my kanban board and moving items around as I was working on them.
 ![Kanban Boards](./media/kanbanprogress.png)
@@ -130,7 +130,7 @@ The scope of the project can be seen on the board, which I mainly limited to MVP
 
 
 ## Functional Structure
-Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given a option to join or go to any of the  links in which they are interested in.
+Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given a option to join or go to any of the links in which they are interested in.
 
 Registration page: The user must create an account to make a purhcase or to sign up for a competition. To do this, they are asked to fill out a form on the page with the required fields: Email, username, & password. They will need to confirm their email address.
 
@@ -138,15 +138,15 @@ Sign In/Login page: A username/email and password are required to log in for exi
 
 Logout page: Logging out of the account is done through the menu, after which the user is redirected to the logout page where they must confirm their desire to log out of the account. After a successful logout, the user is returned to the home page.
 
-Products page: A user can view all the products offered and sort through the products offered. Can sort by category, rating, & price. 
+Products page: A user can view all the products offered and sort through the products offered. Can sort by category, rating, & price. Users can also use the search feature as well.
 
 Train With Us: There are two options here: Memberships & Personal training sessions. Memberships to purchase are 3, 6, & 12 months, while a user can purhcase personal training sessions in 1, 5, or 10 sessions.
 
-Competitions: You must be logged in to join a competition, but here users can see which competitions they are join. They can also view and delete their competitions as well.
+Competitions: You must be logged in to join a competition, but here users can see which competitions they can join. They can also view and delete their competitions as well.
 
 Connect With Us: Here users have a few different views: Contact Us, Reviews, Newsletter & Private Policy. The contact us page the user can complete a form to contact us. The reviews page a user can view personal training reviews and write their own review which will be approved by admin prior to posting. Users can also sign up for a newsletter, as well as view the private policy statement.
 
-Facebook Page: Created for this project aimed at continued growth of the website.
+Facebook Page: Created for this project aimed at continued growth and promotion of the website.
 
 
 # Wireframes
@@ -175,7 +175,7 @@ Moscow:
 # Responsive Design
 
 The site has been designed to be responsive and adapted for use on both desktop and mobile devices. The project has been tested using a multi-device emulator with different screen sizes in the Google Chrome Developer Dashboard.
-![responsive](./static/assets/images/validations/iamresponsive.png)
+![responsive](./media/amiresponsive.png)
 
 # FEATURES
 
@@ -219,7 +219,7 @@ Competitions - Where a user can view competitions to join if they are signed up 
 Competition Booking Page - Where a user can view the competitions they are booked and/or delete their bookings.
 ![Competition Booking page](./media/competitionbooking.png)
 
-Connect With Us - This is where users can do severl things - contact us, read/write reviews, join newsletter, read the private policy.
+Connect With Us - This is where users can do several things - contact us, read/write reviews, join newsletter, read the private policy.
 Contact us offers a fully functional form for the user to contact us.
 ![contact us page](./media/contactus.png)
 The Reviews Page the user can read reviews of personal trainers as well as write their own review. The review will need to be approved first by admin prior to posting.
@@ -248,13 +248,13 @@ Order Success - User is informed that their order was successful:
 Edit or Delete Product - Where Admin can edit and delete products:
 ![Edit or Delete Product page](./media/editanddeleteproducts.png)
 
-Messages - Where users are informed of their actions
+Messages - Where users are informed of their actions:
 ![Message Notifications page](./media/messagenotifications.png)
 
 Footer - Information that it was created by me plus appropriate links:
 ![footer](./media/footer.png)
 
-Facebook - Facebook page
+Facebook - Facebook page:
 ![Facebook Intro](./media/facebook1.png)
 ![Facebook Post](./media/facebook2.png)
 ![Facebook Info](./media/facebook3.png)
@@ -264,7 +264,7 @@ The same cover image is used as in the homepage for the company website. Consist
 
 Users can be brought to this page by clicker the footer facebook image.
 
-Custom 404 Page for the user if there is an error
+Custom 404 Page for the user if there is an error:
 ![Custom404](./media/custom404.png)
 
 
@@ -336,23 +336,16 @@ Testing has been carried out on the following browsers:
 
 The site was constantly tested during the process of creating the site in the Gitpod Environment and the deployed site on Heroku was also tested in terms of user experience. The available functionality and user experience is reflected in the table below.
 
-| Goals and Actions | As a Guest | As a User | Comment |
-| -------- | -------- |  -------- | -------- |
-| I can use the menu and navigate through the pages   | X | X | Click on items
-| I can see the Home Page   | X | X | Click on items
-| I can see the Registration Page  | X | X | Click on items and this disappears from the nav bar once registered
-| I can see the Bookings Page |   | X | Need to be authorized to see
-| I can see the My Bookings page  |  | X | Need to be authorized to see
-| I can see the Sign Up Page | X | X | Click on items
-| I can see the Login/Logout Pages | X | X | You see one or the other depending on if you are logged in or logged out
-| I can complete the Registration form  | X | X | Click on items
-| I can complete the Sign In form  | X | X | Click on items
-| I can make a booking for a particular session/class |  | X | Need to be authorized to do
-| I can delete a particular session/class |   | X | Need to be authorized to do
-| I can edit a particular session/class by adding a note |   | X | Need to be authorized to do
-| I can see if I have made a booking successfully  |   | X | Need to be authorized to do
-| I can see if I have already made a booking for a session  |  | X | Need to be authorized to do
-| I can see if a session has availability (max 20)  |  | X | Need to be authorized to do
+
+
+| Bug| Solution | 
+| ------- | ------- |  
+| Issue for formatting on smaller screens when added items to the cart| Adjusted css for smaller screens to fix issue|
+| Issue with formatting issue in footer on some of the pages | Adjust css for these pages, most of the time I forgot to end a div|
+| Issue with inconsistent margins on some of the pages I created | Adjust css on these pages accordingly|
+| Issue when using Mail Chimp when using a google account | Needed to contact tutor in order to create runtime.txt file to add to my project|
+| Issue with model for booking competitons to join | Fixed issues with form because it would bring me to a new page where a user could change the user for their booking. Used print statements to find where the issue was|
+| Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first
 
 * Example of format error on smaller screens for the cart:
 ![Cart Error](./media/carterror.jpg)
@@ -363,22 +356,10 @@ The site was constantly tested during the process of creating the site in the Gi
 * Example of format margin on some of the webpages - this was a consistent issue
 ![Margin Error](./media/marginissue.jpg)
 
-Issue with email for gmail to use for Mail Chimp - needed runtime file
-
-| Bug| Solution | 
-| ------- | ------- |  
-|  Issue with bookings showing all on Mondays | Need to adjust the book_session and booking functions |
-| Issue with filtering objects if booking_exists to be able to later change the booking  | Use print states and True/False to find the error |
-| CSS issues on Successful Booking Page | Ensure all classes were correct, as well as divs | 
-| Delete Booking wouldn't go to delete_booking page | Needed to rework delete function and return renders outcomes | 
-| When Debug was set to False, none of the CSS was displayed in Heroku app| Python command to collect static files | 
-| When trying to implement 20 max for session, it would write none instead of a message when at 20 spots| Change functions and create error page | 
-| When I was creating the editing function I first used the booking form to edit, but then the user could change the username and workout session | I created a new form which was just the note so that could be edited| 
-
 
 ## Validation
 
-### Manual Testing of Features
+### Manual Testing of Features and Goals for the Project
 
 ![Navigation](.media/testingnav.png)
 ![Registration](.media/testingreg.png)
@@ -393,7 +374,7 @@ Issue with email for gmail to use for Mail Chimp - needed runtime file
 ### HTML Validation:
 The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, and unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without significant errors.
 
-A few errors are evident; however they are all from the Boutique Ado walkthrough. Therefore, I left it alone since it was based on Code Institute's own code.
+A few errors are evident; however they are all from the Boutique Ado walkthrough. Therefore, I left it alone since it was based on Code Institute's own code for this project.
 ![HTMl Validation](./media/htmlerrors.png)
 
 
@@ -412,7 +393,7 @@ During testing a few issues were identified and corrected:
 * All lines adjusted to <80 characters
 * Minor errors with missing closing tags
 
-All work passed with the exeception of a few lines that were too long. However, many of these lines were from the Boutique Ado walkthrough and; therefore, I thought it was ok to leave as this is the example my work was based upon.
+All work passed with the exeception of a few lines that were too long. However, these lines were from the Boutique Ado walkthrough and; therefore, I thought it was ok to leave as this is the example my work was based upon.
 
 
 ### Lighthouse
@@ -442,18 +423,17 @@ The site is deployed to Heroku through the following steps:
 # Credits
 
 ## Code
-The structure and the code of the project was based on two walkthroughs by the Code Institute:
+The structure and the code of the project was based on the walkthroughs by the Code Institute:
 
+* [Code Institute WalkThroughs](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) "Boutique Ado" worked as inspiration and code examples.
 * Hello Django - I created CRUD functionalities based on the examples of this walkthrough.
 [Django Documenation](https://www.djangoproject.com/) was used to provide examples of code solutions and Django functionality.
-* [Bootstrap Documenation](https://getbootstrap.com/)  was used to provide examples of Bootstrap functionality and building blocks.
-* [Code Institute WalkThroughs](https://codeinstitute.net/se/) "Boutique Ado" worked as inspiration and code examples.
+* [Bootstrap Documenation](https://getbootstrap.com/) was used to provide examples of Bootstrap functionality and building blocks.
 
 ## Content
 
 Information is fictional and created by me and I was inspired by my own CrossFit box 
-[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. I also used
-[Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gymn as well. Though the information is in Swedish. 
+[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. I also used [Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gymn as well. Though the information is in Swedish. 
 
 ## Media
 
