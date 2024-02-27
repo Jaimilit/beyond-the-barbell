@@ -19,9 +19,11 @@ def competitions(request):
         # Check if the user has already booked this competition
         existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
         if existing_booking:
-            messages.warning(request, 'You have already booked this competition.')
+            messages.warning(
+                request, 'You have already booked this competition.')
         else:
-            booking = Booking(user_profile=user_profile, competition=competition)
+            booking = Booking(user_profile=user_profile,
+                              competition=competition)
             booking.save()
             messages.success(request, 'Booking is confirmed.')
             return redirect('my_bookings')

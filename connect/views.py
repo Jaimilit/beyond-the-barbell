@@ -31,12 +31,14 @@ def contact(request, *args, **kwargs):
 
 
 def reviews(request):
+    """to view reviews"""
     reviews = TrainerReview.objects.all()
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
 
 
 def submit_review(request):
+    """to submit a review"""
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
