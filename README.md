@@ -270,9 +270,13 @@ Footer - Information that it was created by me plus appropriate links:
 ![footer](./media/footer.png)
 
 Facebook - Facebook page:
+Top of page:
 ![Facebook Intro](./media/facebook1.png)
+Post of page:
 ![Facebook Post](./media/facebook2.png)
+Page Info:
 ![Facebook Info](./media/facebook3.png)
+Link to Facebook page:
 [Facebook Page](https://www.facebook.com/profile.php?id=61556647505650)
 
 The same cover image is used as in the homepage for the company website. Consistency in the company colours and images makes the brand easier to recognise and remember.
@@ -393,10 +397,10 @@ The site was constantly tested during the process of creating the site in the Gi
 ![Cart Error](./media/carterror.jpg)
 
 * Example of format error for footer:
-![Footer Error](./media/footerissue.jpg)
+![Footer Error](./media/footerissue.png)
 
 * Example of format margin on some of the webpages - this was a consistent issue
-![Margin Error](./media/marginissue.jpg)
+![Margin Error](./media/marginissue.png)
 
 
 ## Validation
