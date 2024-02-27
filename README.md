@@ -10,11 +10,11 @@ GitHub Repository: [GitHub](https://github.com/Jaimilit/beyond-the-barbell)
 
 - [Project Goals](#project-goals)
 - [UX](#ux)
-    - [Agile Tools](#Agile Tools)
+    - [Agile Tools](#Agile-Tools)
 - [Design and Structure](#design-and-structure)
     - [Kanban Boards](#kanban-boards)
     - [Functional Structure](#functional-structure)
-- [WireFrames](#Wireframes)
+- [WireFrames](#wireframes)
 - [Responsive Design](#responsive-design)
 - [Features](#features)
     - [Navigation Bar](#navigation-bar)
@@ -52,11 +52,11 @@ GitHub Repository: [GitHub](https://github.com/Jaimilit/beyond-the-barbell)
 
 This project is for an e-commerce website for a hypothetical business called Beyond the Barbell.
 
-Beyond the Barbell is a business to customer (B2C) e-commerce site, selling products to users - such as health products, clothes, and gear. Additionally, users can subscribe to the box/gym with different variations of subscriptions as well as buy personal training sessions. As a member, the user can also write reviews of personal trainers, as well as sign up for competitions offered.
+Beyond the Barbell is a business to customer (B2C) e-commerce site, selling products to users - such as health products, clothes, and gear. Additionally, users can subscribe to the box/gym with different variations of subscriptions as well as buy personal training sessions. A user can also write reviews of personal trainers, as well as sign up for competitions offered.
 
-Features of this business-focused website include a shopping cart, a catalogue of products, an online payment system that can save the customer’s preferred mode of payment, sign up for an email newsletter, contact us page, and private policy statement.
+Features of this business-focused website include a shopping cart, a catalogue of products, an online payment system that can save the customer’s preferred mode of payment, sign up for an email newsletter, contact us page, and view the private policy statement.
 
-The site was developed using Python in the Django framework and styled using CSS and Bootstrap. ElephantSQL is used for the database and Heroku for deployment. The site is for anyone who is interested in health and fitness.
+The site was developed using Python in the Django framework and styled using CSS and Bootstrap. ElephantSQL is used for the database and Heroku for deployment. The site is for anyone who is interested in health and fitness. Whether it's wanting to join the gym, buy products such as gear and gym clothes, to buy products for health and fitness, this website is for someone who aims to be more health conscious.
 
 # UX
 
@@ -117,12 +117,12 @@ Robots.txt file so that google could crawl the site. I have blocked off the acco
 
 # Design and Structure
 
-The layout and design of this site was kept basic and simple. Minimal color was used to keep it simple. [Coolors](https://coolors.co/) was used for simple color choices. This website is meant to be functional and therefore I kept the color palette simple and something similiar to what you would see in an actual gym.  
+The layout and design of this site was kept basic and simple. Minimal color was used to keep the design simple. [Coolors](https://coolors.co/) was used for simple color choices. This website is meant to be functional and therefore I kept the color palette simple and something similiar to what you would see in an actual gym.  
 
-Fonts chosen to be easy to read and use
-Favicons used in theme of fitness
-Forms use crispy templates
-The image on the homepage is kept basic and dark in relation to what you actually see at the gym (at least here in Sweden - lots of dark colors!)
+* Fonts chosen to be easy to read and use
+*  Favicons used in theme of fitness
+* Forms use crispy templates
+* The image on the homepage is kept basic and dark in relation to what you actually see at the gym (at least here in Sweden - lots of dark colors!)
 
 
 ## Kanban Boards
@@ -299,7 +299,7 @@ Custom 404 Page for the user if there is an error:
 * Page where user can view past competitions
 * Page where users can connect with other users
 * Receive email of confirmation of order history
-* Actually send monthly subscription newsletters based on updates for the site
+* Implement functionality to send monthly subscription newsletters based on site updates
 
 
 # Technology Used:
@@ -349,20 +349,20 @@ Custom 404 Page for the user if there is an error:
 Products are what is the main focus of the e-commerce website. Admin can add, edit, and delete a product, add related image, and descriptions - as well as competitions and reviews.
 
 CRUD
-*Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join as well as reviews of personal trainers.
-*Read: All users can view all the product and read about them in the product navbar. All users can read the competitions offered and read reviews of personal trainers.
-*Update: Only admin can update the products and competitions.
-*Delete: Only admin can delete the products, competitions, & reviews.
+* Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join as well as reviews of personal trainers.
+* Read: All users can view all the product and read about them in the product navbar. All users can read the competitions offered and read reviews of personal trainers.
+* Update: Only admin can update the products and competitions.
+* Delete: Only admin can delete the products, competitions, & reviews.
 
 ## Reviews
 
 Users can leave a review about personal training.
 
 CRUD
-*Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
-*Read: All users, even those who are not logged in, can read all reviews written about the personal trainer.
-*Update: Only the admin can update review - but users can contact admin via the contact form.
-*Delete: Only the admin can approve and post or delete a review.
+* Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
+* Read: All users, even those who are not logged in, can read all reviews written about the personal trainer.
+* Update: Only the admin can update review - but users can contact admin via the contact form.
+* Delete: Only the admin can approve and post or delete a review.
 
 # Testing
 
@@ -390,9 +390,9 @@ The site was constantly tested during the process of creating the site in the Gi
 
 | Bug| Solution | 
 | ------- | ------- |  
-| Issue for formatting on smaller screens when added items to the cart| Adjusted css for smaller screens to fix issue|
-| Issue with formatting issue in footer on some of the pages | Adjust css for these pages, most of the time I forgot to end a div|
-| Issue with inconsistent margins on some of the pages I created | Adjust css on these pages accordingly|
+| Issue for formatting on smaller screens when added items to the cart| Adjusted CSS for smaller screens to fix issue|
+| Issue with formatting issue in footer on some of the pages | Adjust CSS for these pages, most of the time I forgot to end a div|
+| Issue with inconsistent margins on some of the pages I created | Adjusted CSS on these pages accordingly|
 | Issue when using Mail Chimp when using a google account | Needed to contact tutor in order to create runtime.txt file to add to my project|
 | Issue with model for booking competitons to join | Fixed issues with form because it would bring me to a new page where a user could change the user for their booking. Used print statements to find where the issue was|
 | Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first|
@@ -400,7 +400,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
 | Issue of admin approval not working prior to posting | In my models I forgot the approval field so that once in admin I could change it to true|
 
-* Example of format error on smaller screens for the cart:
+* Example of format error on smaller screens for the cart - it goes down on the next line almost:
 ![Cart Error](./media/carterror.jpg)
 
 * Example of format error for footer:
@@ -577,12 +577,12 @@ I followed the below steps using the Code Institute tutorial. The project was fi
 ## Heroku
 The site is deployed to Heroku through the following steps:
 
-1. Log in to Heroku or create an account, if required. On the Welcome page in the top right corner click the button labeled 'New'.
+1. Log in to Heroku or create an account, if required. On the welcome page in the top right corner click the button labeled 'New'.
 2. From the drop-down menu select 'Create new app'. Enter a preferred app name. Select the relevant geographical region. Click to 'Create App'.
 3. Login or sign up to ElephantSQL. Press create a new instance. Choose a name and plan. Then click on select region. Select the closest Data Center to you. Click on "Create Instance". Go back to the start page and click on your new database. Copy the URL for the database.
-4. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter keys with appropiate values for the following: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DATABASE_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, SECRET_KEY, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET, & USE_AWS. These were copied from AWS, Stripe, Gmail, and ElephantSQL.
-5. Also needed t0 install dj-database_url and psycopg2 to connect to your external database
-6. Update your requirements.txt file by typing in pip3 freeze --local > requirements.txt
+4. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter keys with appropriate values for the following: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DATABASE_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, SECRET_KEY, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET, & USE_AWS. These were copied from AWS, Stripe, Gmail, and ElephantSQL.
+5. Also needed to install dj-database_url and psycopg2 to connect to your external database.
+6. Update your requirements.txt file by typing in pip3 freeze --local > requirements.txt.
 7. Add the DATABASE_URL to your env.py file or environment variables in gitpod.
 8. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
 9. Once the project is completed and you are no longer working on it set DEBUG = False in settings.py.
@@ -601,7 +601,7 @@ The structure and the code of the project was based on the walkthroughs by the C
 ## Content
 
 Information is fictional and created by me and I was inspired by my own CrossFit box 
-[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. I also used [Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gymn as well. Though the information is in Swedish. 
+[CrossFit Fabriken](https://www.cf-fabriken.com/). This is my CrossFit box and my inspiration for this project. I also used [Nordic Wellness](https://nordicwellness.se) as inspiration as I belong to this gym as well. Though the information is in Swedish. 
 
 ## Media
 
