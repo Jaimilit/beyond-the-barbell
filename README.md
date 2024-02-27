@@ -408,6 +408,7 @@ The site was constantly tested during the process of creating the site in the Gi
 ### Manual Testing of Features and Goals for the Project
 
 ![Navigation](.media/testingnav.png)
+![Navigation](.media/testingnav.png)
 ![Registration](.media/testingreg.png)
 ![Profile](.media/testingprofile.png)
 ![Sorting](.media/testingsorting.png)
