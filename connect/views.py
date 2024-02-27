@@ -30,15 +30,35 @@ def contact(request, *args, **kwargs):
     return render(request, 'contact_us.html', {'form': form})
 
 
+def submit_review(request):
+    """ View to submit a review """
+    if request.method == 'POST':
+        form = ReviewForm(request.POST)
+        if form.is_valid():
+            review = form.save(commit=False)
+            review.save()  # Save the review as draft
+            messages.success(request, 'Thank you for your review! It will be published after admin approval.')
+            return redirect(reverse('reviews'))
+        else:
+            messages.error(request, 'Oops! There is an error with your review. Please check your details and try again.')
+    else:
+        form = ReviewForm()
+    return render(request, 'submit_review.html', {'form': form})
+
 def reviews(request):
-    """to view reviews"""
+    """ View to display reviews """
+    reviews = TrainerReview.objects.filter(approved=True)  # Only approved reviews are shown
+    context = {'reviews': reviews}
+    return render(request, 'reviews.html', context)
+
+"""   
+def reviews(request):
     reviews = TrainerReview.objects.all()
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
 
-
+ 
 def submit_review(request):
-    """to submit a review"""
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
@@ -51,6 +71,8 @@ def submit_review(request):
     else:
         form = ReviewForm()
     return render(request, 'submit_review.html', {'form': form})
+
+"""
 
 
 def newsletter(request):

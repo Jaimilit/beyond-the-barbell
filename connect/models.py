@@ -31,7 +31,8 @@ class TrainerReview(models.Model):
     ]
     rating = models.IntegerField(choices=RATING_CHOICES)
     date_posted = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    approved = models.BooleanField(default=False)
+    #status = models.IntegerField(choices=STATUS, default=0)
 
     def __str__(self):
         return self.title
