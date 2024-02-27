@@ -10,21 +10,25 @@ GitHub Repository: [GitHub](https://github.com/Jaimilit/beyond-the-barbell)
 
 - [Project Goals](#project-goals)
 - [UX](#ux)
-    - [Agile Tools](#Agile-Tools)
+    - [Agile Tools](#Agile Tools)
 - [Design and Structure](#design-and-structure)
     - [Kanban Boards](#kanban-boards)
     - [Functional Structure](#functional-structure)
 - [WireFrames](#Wireframes)
+- [Responsive Design](#responsive-design)
 - [Features](#features)
     - [Navigation Bar](#navigation-bar)
     - [Pages](#pages)
-- [Responsive Design](#responsive-design)
+    - [Facebook Page](#Facebook)
 - [Future Features](#future-features)
 - [Technology Used](#technology-used)
     - [Languages](#languages)
     - [Frameworks, Libraries, and Programs](#frameworks-libraries-and-programs)
     - [Database](#database)
     - [Program and Tools](#program-and-tools)
+- [Crud](#crud)
+    - [Products](#products)
+    - [Reviews](#reviews)
 - [Testing](#testing)
     - [Bugs](#bugs)
         - [Manual Testing](#manual-testing)
@@ -269,7 +273,9 @@ Product Management - Admin can add products:
 Footer - Information that it was created by me plus appropriate links:
 ![footer](./media/footer.png)
 
-Facebook - Facebook page:
+## Facebook 
+
+Facebook page:
 Top of page:
 ![Facebook Intro](./media/facebook1.png)
 Post of page:
