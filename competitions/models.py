@@ -1,5 +1,5 @@
 from django.db import models
-from profiles.models import UserProfile 
+from profiles.models import UserProfile
 from django.contrib.auth.models import User
 
 
@@ -17,7 +17,9 @@ class Competition(models.Model):
 class Booking(models.Model):
     """This model provides the booking info for the user to
     book a competition"""
-    user_profile = models.ForeignKey(UserProfile, on_delete=models.CASCADE, default=None)
+    user_profile = models.ForeignKey(UserProfile,
+                                     on_delete=models.CASCADE,
+                                     default=None)
     competition = models.ForeignKey(
         'Competition',
         on_delete=models.CASCADE
@@ -30,7 +32,3 @@ class Booking(models.Model):
 
     def save(self, *args, **kwargs):
         super(Booking, self).save(*args, **kwargs)
-        
-
-
-    

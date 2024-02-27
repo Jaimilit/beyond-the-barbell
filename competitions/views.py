@@ -15,7 +15,7 @@ def competitions(request):
         competition_id = request.POST.get('competition_id')
         competition = get_object_or_404(Competition, id=competition_id)
         user_profile = request.user.userprofile
-        
+
         # Check if the user has already booked this competition
         existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
         if existing_booking:
@@ -25,22 +25,23 @@ def competitions(request):
             booking.save()
             messages.success(request, 'Booking is confirmed.')
             return redirect('my_bookings')
-    
+
     competitions = Competition.objects.all()
     return render(request, 'competitions.html', {'competitions': competitions})
+
 
 @login_required
 def booking(request, competition_id):
     """View for booking a specific competition"""
     competition = get_object_or_404(Competition, id=competition_id)
     user_profile = request.user.userprofile
-    
+
     # Check if the user has already booked this competition
     existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
     if existing_booking:
         messages.warning(request, 'You have already booked this competition.')
         return redirect('my_bookings')
-    
+
     if request.method == 'POST':
         form = BookingForm(request.POST)
         if form.is_valid():
@@ -52,9 +53,8 @@ def booking(request, competition_id):
             return redirect('my_bookings')
     else:
         form = BookingForm()
-    
-    return render(request, 'booking.html', {'form': form, 'competition': competition})
 
+    return render(request, 'booking.html', {'form': form, 'competition': competition})
 
 
 @login_required
@@ -62,6 +62,7 @@ def my_bookings(request):
     """View to display user bookings"""
     user_bookings = Booking.objects.filter(user_profile=request.user.userprofile)
     return render(request, 'my_bookings.html', {'user_bookings': user_bookings})
+
 
 @login_required
 def delete_booking(request, booking_id):
@@ -71,4 +72,3 @@ def delete_booking(request, booking_id):
         booking.delete()
         messages.success(request, 'Booking deleted successfully.')
     return redirect('my_bookings')
-
