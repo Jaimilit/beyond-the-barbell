@@ -44,7 +44,7 @@ GitHub Repository: [GitHub](https://github.com/Jaimilit/beyond-the-barbell)
     - [Inspiration](#inspiration)
 
 
-Project Goals
+# Project Goals
 
 This project is for an e-commerce website for a hypothetical business called Beyond the Barbell.
 
@@ -52,9 +52,12 @@ Beyond the Barbell is a business to customer (B2C) e-commerce site, selling prod
 
 Features of this business-focused website include a shopping cart, a catalogue of products, an online payment system that can save the customer’s preferred mode of payment, sign up for an email newsletter, contact us page, and private policy statement.
 
-The site was developed using Python in the Django framework and styled using CSS and Bootstrap. ElephantSQL is used for the database and Heroku for deployment.
+The site was developed using Python in the Django framework and styled using CSS and Bootstrap. ElephantSQL is used for the database and Heroku for deployment. The site is for anyone who is interested in health and fitness.
 
 # UX
+
+The purpose of the website is to be able to give users an opportunity to explore what is available at this particular gym.
+Whether it's products or memberships, the goal is for the user to be able to browse through the site easy. The user should be able to pruchase items easily, subscribe, contact us, and sign up for competitions to be part of the CrossFit commimnity.
 
 User stories
 
@@ -103,7 +106,9 @@ The Projects section in GitHub was used for this project. A Kanban board was use
 
 The first thing I did was write the user stories I wanted my site to have. Then I created an outline in wireframes of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
 
-SEO considerations implemented: meta description of content and key search words in head of code. sitemap.xml and robots.txt files are also included in the code.
+SEO considerations implemented: meta description of content and key search words in head of code. 
+Sitemap.xml was created for the site so that once ready engines like google can search it effectively.
+Robots.txt file so that google could crawl the site. I have blocked off the accounts app as there is no benefit for google to crawl those pages.
 
 
 # Design and Structure
@@ -113,6 +118,7 @@ The layout and design of this site was kept basic and simple. Minimal color was 
 Fonts chosen to be easy to read and use
 Favicons used in theme of fitness
 Forms use crispy templates
+The image on the homepage is kept basic and dark in relation to what you actually see at the gym (at least here in Sweden - lots of dark colors!)
 
 
 ## Kanban Boards
@@ -151,7 +157,7 @@ Facebook Page: Created for this project aimed at continued growth and promotion 
 
 # Wireframes
 
-Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
+Balsamiq Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
 
 Homepage:
 ![wireframes-homepage](./media/wfhomepage.png)
@@ -195,6 +201,9 @@ Navigation on Mobile:
 Registration Page - Where a user can sign up to use the platform:
 ![registration](./media/registration.png)
 
+Email Verification - Where a user needs to verify their email address to create an account:
+![Verification](./media/emailverify.png)
+
 Sign-In Page - Where a returning user can log-in:
 ![sign-in](./media/signinpage.png)
 
@@ -212,6 +221,9 @@ Train With Us - Where a user can buy memberships & personal training subscriptio
 
 Webshop Products - Where a user can view products by categories:
 ![Webshop](./media/webshopproducts.png)
+
+Product Details - Where a user can view the product details - size (if applicable), description, quantity, & add to cart feature:
+![Product Details](./media/productdetails.png)
 
 Competitions - Where a user can view competitions to join if they are signed up and logged in: 
 ![Competitions page](./media/joincomp.png)
@@ -236,13 +248,13 @@ Profile Page - Where a user can complete their profile page:
 Add to Cart - Where a user can add a product to their cart:
 ![Add to Cart page](./media/addtocart.png)
 
-Shopping Bag - User can view their shopping bag/cart:
+Shopping Bag - User can view their shopping bag/cart. Users can also update, add, and remove items :
 ![Shopping Bag page](./media/shoppingbag.png)
 
-Check Out - User can go to checkout to buy their products:
+Check Out - User can go to checkout to buy their products. This is fully functional via stripe payment. On the left side you enter your personal information including delivery information. If you are a logged in user, you can check a check box that you want to save your info to your profile page:
 ![Check Out page](./media/checkout.png)
 
-Order Success - User is informed that their order was successful:
+Order Success - User is informed that their order was successful and can see their orders:
 ![Order page](./media/ordersuccess.png)
 
 Edit or Delete Product - Where Admin can edit and delete products:
@@ -250,6 +262,9 @@ Edit or Delete Product - Where Admin can edit and delete products:
 
 Messages - Where users are informed of their actions:
 ![Message Notifications page](./media/messagenotifications.png)
+
+Product Management - Admin can add products:
+![Product Management](./media/productmanagement.png)
 
 Footer - Information that it was created by me plus appropriate links:
 ![footer](./media/footer.png)
@@ -273,6 +288,8 @@ Custom 404 Page for the user if there is an error:
 * Page with information about the personal trainers
 * Page where user can view past competitions
 * Page where users can connect with other users
+* Receive email of confirmation of order history
+* Actually send monthly subscription newsletters based on updates for the site
 
 
 # Technology Used:
@@ -304,6 +321,7 @@ Custom 404 Page for the user if there is an error:
 * [Gunicorn](https://docs.djangoproject.com/en/4.1/howto/deployment/wsgi/gunicorn/): "Green Unicorn" is a Python Web Server Gateway to translate HTTP Requests for Python to understand
 * [Spycopg2](https://pypi.org/project/psycopg2/): PostgreSQL database adapter so I can manage the Database in Python
 * [AWS](https://aws.amazon.com/): The image hosting service used to upload images and other media
+* [Stripe](https://stripe.com/): Stripe payment for purchases
 * [Heroku](https://dashboard.heroku.com/apps): The hosting service used to host the website
 * [VSCode](https://code.visualstudio.com/): The IDE used to develop the website
 * [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/open/): Was used to debug the website
@@ -313,6 +331,28 @@ Custom 404 Page for the user if there is an error:
 * [Github Projects](https://github.com/): Kanban board was used to track the progress of the project in general and of every application in the project
 * [Wireframes](https://balsamiq.com/learn/articles/what-are-wireframes/): Was used to created the outline for my project
 
+
+# Crud 
+
+## Products
+
+Products are what is the main focus of the e-commerce website. Admin can add, edit, and delete a product, add related image, and descriptions - as well as competitions and reviews.
+
+CRUD
+Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join as well as reviews of personal trainers.
+Read: All users can view all the product and read about them in the product navbar. All users can read the competitions offered and read reviews of personal trainers.
+Update: Only admin can update the products and competitions.
+Delete: Only admin can delete the products, competitions, & reviews.
+
+## Reviews
+
+Users can leave a review about personal training.
+
+CRUD
+Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
+Read: All users, even those who are not logged in, can read all reviews written about the personal trainer.
+Update: Only the admin can update review - but users can contact admin via the contact form.
+Delete: Only the admin can approve and post or delete a review.
 
 # Testing
 
@@ -345,7 +385,9 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with inconsistent margins on some of the pages I created | Adjust css on these pages accordingly|
 | Issue when using Mail Chimp when using a google account | Needed to contact tutor in order to create runtime.txt file to add to my project|
 | Issue with model for booking competitons to join | Fixed issues with form because it would bring me to a new page where a user could change the user for their booking. Used print statements to find where the issue was|
-| Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first
+| Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first|
+| Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
+| Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
 
 * Example of format error on smaller screens for the cart:
 ![Cart Error](./media/carterror.jpg)
@@ -395,6 +437,11 @@ During testing a few issues were identified and corrected:
 
 All work passed with the exeception of a few lines that were too long. However, these lines were from the Boutique Ado walkthrough and; therefore, I thought it was ok to leave as this is the example my work was based upon.
 
+* 404 page created if there's any errors
+![Custom 404](.media/custom404.png)
+
+* User does not have access to Product Management unless a super user/admin
+![No Product Management](.media/noproductmg.png)
 
 ### Lighthouse
 
@@ -416,9 +463,14 @@ The site is deployed to Heroku through the following steps:
 
 1. Log in to Heroku or create an account, if required. On the Welcome page in the top right corner click the button labeled 'New'.
 2. From the drop-down menu select 'Create new app'. Enter a preferred app name. Select the relevant geographical region. Click to 'Create App'.
-3. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter keys with appropiate values for the following: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DATABASE_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, SECRET_KEY, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET, & USE_AWS. These were copied from AWS, Stripe, Gmail, and ElephantSQL.
-4. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
-5. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
+3. Login or sign up to ElephantSQL. Press create a new instance. Choose a name and plan. Then click on select region. Select the closest Data Center to you. Click on "Create Instance". Go back to the start page and click on your new database. Copy the URL for the database.
+4. Navigate to 'Settings' and scroll down to the 'Config Vars' section. Click 'Reveal Config Vars' and enter keys with appropiate values for the following: AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, DATABASE_URL, EMAIL_HOST_PASS, EMAIL_HOST_USER, SECRET_KEY, STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY, STRIPE_WH_SECRET, & USE_AWS. These were copied from AWS, Stripe, Gmail, and ElephantSQL.
+5. Also needed t0 install dj-database_url and psycopg2 to connect to your external database
+6. Update your requirements.txt file by typing in pip3 freeze --local > requirements.txt
+7. Add the DATABASE_URL to your env.py file or environment variables in gitpod.
+8. Click on the 'Deploy' tab. Next to 'Deployment method' select 'GitHub'. Connect the relevant GitHub repository. Under 'Manual deploy' choose the correct branch and click 'Deploy Branch'. Also you can select 'Automatic Deploys' so that the site updates when updates are pushed to GitHub.
+9. Once the project is completed and you are no longer working on it set DEBUG = False in settings.py.
+10. After successful deployment message in the page top right corner click the button labeled 'Open app' and you can access live app.
 
 # Credits
 
