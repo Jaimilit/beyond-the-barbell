@@ -20,7 +20,6 @@ class ContactForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
 
 
-
 class ReviewForm(forms.ModelForm):
     """ Review form for reviewing Personal Trainers"""
     class Meta:
@@ -29,4 +28,5 @@ class ReviewForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['rating'].widget = forms.Select(choices=TrainerReview.RATING_CHOICES)
+        rating_choices = TrainerReview.RATING_CHOICES
+        self.fields['rating'].widget = forms.Select(choices=rating_choices)

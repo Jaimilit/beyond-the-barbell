@@ -44,12 +44,12 @@ def submit_review(request):
             messages.success(request, 'Thank you for your review!')
             return redirect(reverse('reviews'))
         else:
-            messages.error(request, 'Oops! There was an error submitting your review. Please check your details and try again.')
+            messages.error(request, 'Oops! There is an error with your review.'
+                           'Please check your details and try again.')
     else:
         form = ReviewForm()
     return render(request, 'submit_review.html', {'form': form})
 
-    
 
 def newsletter(request):
     """ A view to return the newsletter signup page """
@@ -61,5 +61,3 @@ def private_policy(request):
     """ A view to render the privacy statement in compliance with GDPR """
 
     return render(request, 'private_policy.html')
-
-

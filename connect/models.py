@@ -1,7 +1,6 @@
 from django.db import models
 from django.utils import timezone
-from profiles.models import UserProfile 
-
+from profiles.models import UserProfile
 
 
 class Contact(models.Model):
@@ -33,7 +32,6 @@ class TrainerReview(models.Model):
     rating = models.IntegerField(choices=RATING_CHOICES)
     date_posted = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-
 
     def __str__(self):
         return self.title

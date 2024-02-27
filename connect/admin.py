@@ -27,7 +27,7 @@ class TrainerReviewAdmin(admin.ModelAdmin):
     def delete_review(self, request, queryset):
         for obj in queryset:
             obj.delete()
-        self.message_user(request, "Selected reviews were successfully deleted.")
+        self.message_user(request, "Selected reviews were deleted.")
         actions = ['approve_trainer_review']
 
     def approve_trainer_review(self, request, queryset):
@@ -35,5 +35,3 @@ class TrainerReviewAdmin(admin.ModelAdmin):
 
     # Customize the display name for the action
     delete_review.short_description = "Delete selected reviews"
-
-   
