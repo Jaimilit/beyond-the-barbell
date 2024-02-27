@@ -378,20 +378,31 @@ Issue with email for gmail to use for Mail Chimp - needed runtime file
 
 ## Validation
 
+### Manual Testing of Features
+
+![Navigation](.media/testingnav.png)
+![Registration](.media/testingreg.png)
+![Profile](.media/testingprofile.png)
+![Sorting](.media/testingsorting.png)
+![Checkout](.media/testingcheckout.png)
+![Admin](.media/testingadmin.png)
+![Connecting](.media/testingconnecting.png)
+
+
+
 ### HTML Validation:
 The W3C Markup Validation Service was used to validate the HTML of the website. There were errors and warnings in the reports about unclosed elements and tags, incorrect values ​​and types of elements, and unnecessary trailing slashes. All errors and warnings have been fixed, the project's HTML code has been re-checked without significant errors.
 
-It shows one error here and I have fixed it, but it still shows.
-![HTMl Validation](./static/assets/images/validations/html.png)
+A few errors are evident; however they are all from the Boutique Ado walkthrough. Therefore, I left it alone since it was based on Code Institute's own code.
+![HTMl Validation](./media/htmlerrors.png)
 
 
 ### CSS Validation:
 The website CSS style has successfully passed the W3C Jigsaw CSS Validation Service.
-![CSS](./static/assets/images/validations/css-validation.png)
+![CSS](./media/cssnoerrors.png)
 
 ### Python Validation (PEP8)
 All Python code was manually checked using CI Python Linter. The Linter reports had messages about exceeding the string length of 79 characters, which have been fixed. Re-testing did not reveal any errors.
-
 
 During testing a few issues were identified and corrected:
 
@@ -400,6 +411,9 @@ During testing a few issues were identified and corrected:
 * Two lines spaces between functions and classes
 * All lines adjusted to <80 characters
 * Minor errors with missing closing tags
+
+All work passed with the exeception of a few lines that were too long. However, many of these lines were from the Boutique Ado walkthrough and; therefore, I thought it was ok to leave as this is the example my work was based upon.
+
 
 ### Lighthouse
 
