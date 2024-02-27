@@ -57,7 +57,7 @@ The site was developed using Python in the Django framework and styled using CSS
 # UX
 
 The purpose of the website is to be able to give users an opportunity to explore what is available at this particular gym.
-Whether it's products or memberships, the goal is for the user to be able to browse through the site easy. The user should be able to pruchase items easily, subscribe, contact us, and sign up for competitions to be part of the CrossFit commimnity.
+Whether it's products or memberships, the goal is for the user to be able to browse through the site easy. The user should be able to purchase items easily, subscribe, contact us, and sign up for competitions to be part of the CrossFit community.
 
 User stories
 
@@ -104,7 +104,7 @@ Site Administrator goals
 
 The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress. In addition, labels were used to further define the priority of each user story in the Kanban board.
 
-The first thing I did was write the user stories I wanted my site to have. Then I created an outline in wireframes of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
+The first thing I did was write the user stories I wanted my site to have. Then I created an outline in WireFrames of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
 
 SEO considerations implemented: meta description of content and key search words in head of code. 
 Sitemap.xml was created for the site so that once ready engines like google can search it effectively.
@@ -157,7 +157,7 @@ Facebook Page: Created for this project aimed at continued growth and promotion 
 
 # Wireframes
 
-Balsamiq Wireframes were used to create the basic layout of the project. The wireframes pages can be seen below:
+Balsamiq Wireframes were used to create the basic layout of the project. The WireFrames pages can be seen below:
 
 Homepage:
 ![wireframes-homepage](./media/wfhomepage.png)
@@ -236,7 +236,7 @@ Contact us offers a fully functional form for the user to contact us.
 ![contact us page](./media/contactus.png)
 The Reviews Page the user can read reviews of personal trainers as well as write their own review. The review will need to be approved first by admin prior to posting.
 ![reviews page](./media/reviews.png)
-The newsletter - the user can full subscribe using MailChimp and let's the user know it was successful.
+The newsletter - the user can fully subscribe using MailChimp and let's the user know it was successful.
 ![newsletter page](./media/subscribe.png)
 ![newsletter joined page](./media/subscribemessage.png)
 The user can read the private policy - GDPR approved.
@@ -407,13 +407,13 @@ The site was constantly tested during the process of creating the site in the Gi
 
 ### Manual Testing of Features and Goals for the Project
 
-![Navigation](.media/testingnav.png)
-![Registration](.media/testingreg.png)
-![Profile](.media/testingprofile.png)
-![Sorting](.media/testingsorting.png)
-![Checkout](.media/testingcheckout.png)
-![Admin](.media/testingadmin.png)
-![Connecting](.media/testingconnecting.png)
+![Navigation](./media/testingnav.png)
+![Registration](./media/testingreg.png)
+![Profile](./media/testingprofile.png)
+![Sorting](./media/testingsorting.png)
+![Checkout](./media/testingcheckout.png)
+![Admin](./media/testingadmin.png)
+![Connecting](./media/testingconnecting.png)
 
 
 
@@ -445,11 +445,12 @@ All work passed with the exeception of a few lines that were too long. However, 
 ![Custom404](./media/custom404.png)
 
 * User does not have access to Product Management unless a super user/admin
-![No Product Management](.media/noproductmg.png)
+![No Product Management](./media/noproductmg.png)
 
 ### Lighthouse
 
-![Lighthouse](.media/lighthouse.png)
+![Lighthouse](./media/lighthouse./png)
+
 
 
 # Deployment
