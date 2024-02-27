@@ -23,7 +23,6 @@ body {
     width: 1.5rem;
 }
 
-
 .main-logo-link {
     width: fit-content;
 }
@@ -37,11 +36,9 @@ body {
     padding: 0;
 }
 
-
 .display-4 {
     margin-top: 50px; /* Adjust the value as needed */
 }
-
 
 .btn-black {
     background: black;
@@ -83,9 +80,7 @@ body {
 }
 
 
-
 /* Adjust the styles for links inside list items */
-
 
 #topnav ul li a {
     text-decoration: none;
@@ -138,6 +133,7 @@ a.category-badge > span.badge:hover {
 input[name='q']::placeholder {
     color: #aab7c4;
 }
+
 
 /* ------------------------------- bootstrap toasts */
 
@@ -241,8 +237,6 @@ input[name='q']::placeholder {
 }
 
 
-
-
 /* -------------------------------- Media Queries */
 
 @media (min-width: 768px) {
@@ -255,7 +249,6 @@ input[name='q']::placeholder {
   .container {
     max-width: 80%;
   }
-
  
 }
 
@@ -313,6 +306,7 @@ input[name='q']::placeholder {
 	color: #17a2b8; /* text-info */
 }
 
+
 /* Product Form */
 
 .btn-file {
@@ -341,6 +335,7 @@ input[name='q']::placeholder {
     border-radius: 0;
 }
 
+
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
     .fixed-top-desktop-only {
@@ -355,6 +350,7 @@ input[name='q']::placeholder {
         padding-top: 164px;
     }
 }
+
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
@@ -408,5 +404,17 @@ input[name='q']::placeholder {
 @media (max-width: 775px) {
     .container {
         margin-top: 100px; 
+    }
+}
+
+/* Media query for screens under 500px */
+@media (max-width: 500px) {
+    .fa-lg,
+    .fa-search {
+        font-size: 0.5rem !important; /* Adjust the font size as needed */
+    }
+
+    .nav-link {
+        padding: 0.1rem !important; /* Adjust the padding as needed */
     }
 }
