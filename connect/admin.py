@@ -16,6 +16,7 @@ class ContactAdmin(admin.ModelAdmin):
 
 admin.site.register(Contact, ContactAdmin)
 
+
 @admin.register(TrainerReview)
 class TrainerReviewAdmin(admin.ModelAdmin):
     list_display = ['title', 'trainer', 'rating', 'date_posted', 'approved']
@@ -30,7 +31,8 @@ class TrainerReviewAdmin(admin.ModelAdmin):
 
     def approve_reviews(self, request, queryset):
         queryset.update(approved=True)
-        self.message_user(request, "Selected reviews were approved and published.")
+        self.message_user(request,
+                          "Selected reviews were approved and published.")
 
     delete_review.short_description = "Delete selected reviews"
     approve_reviews.short_description = "Approve selected reviews"

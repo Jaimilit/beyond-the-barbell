@@ -36,7 +36,7 @@ def submit_review(request):
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.save()  
+            review.save()
             messages.success(request, 'Thank you for your review! It will be published after admin approval.')
             return redirect(reverse('reviews'))
         else:
@@ -48,7 +48,7 @@ def submit_review(request):
 
 def reviews(request):
     """ View to display reviews """
-    reviews = TrainerReview.objects.filter(approved=True)  
+    reviews = TrainerReview.objects.filter(approved=True)
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
 
