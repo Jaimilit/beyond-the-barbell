@@ -392,6 +392,7 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first|
 | Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
+| Issue of admin approval not working prior to posting | |
 
 * Example of format error on smaller screens for the cart:
 ![Cart Error](./media/carterror.jpg)
@@ -401,6 +402,9 @@ The site was constantly tested during the process of creating the site in the Gi
 
 * Example of format margin on some of the webpages - this was a consistent issue
 ![Margin Error](./media/marginissue.png)
+
+* Example of admin approval not working prior to posting on website
+![Admin Approval Error](./media/adminapprovalnotworking.png)
 
 
 ## Validation
@@ -450,6 +454,71 @@ All work passed with the exeception of a few lines that were too long. However, 
 ### Lighthouse
 
 ![Lighthouse](./media/lighthouse./png)
+
+### Python Linters
+
+Bag APP
+
+![Bag Tools](./media/bagbagtools.png)
+![Bag Contexts](./media/bagcontexts.png)
+![Bag Urls](./media/bagurls.png)
+![Bag Views](./media/bagviews.png)
+
+Products APP
+
+![Products Admin](./media/productsadmin.png)
+![Products Forms](./media/productsforms.png)
+![Products Models](./media/productsmodels.png)
+![Products Views](./media/productsviews.png)
+![Products Widgets](./media/productswidgets.png)
+![Products Urls](./media/productsurls.png)
+
+Checkout APP
+
+![Checkout Admin](./media/checkoutadmin.png)
+![Checkout Forms](./media/checkoutforms.png)
+![Checkout Models](./media/checkoutmodels.png)
+![Checkout Views](./media/checkoutviews.png)
+![Checkout Urls](./media/checkouturls.png)
+![Checkout Signals](./media/checkoutsignals.png)
+![Checkout Webhook Handler](./media/checkoutwebhookhandler.png)
+![Checkout Webhooks](./media/checkoutwebhooks.png)
+
+
+Profile APP
+
+![Profile Custom Storage ](./media/profilecustomstorages.png)
+![Profile Forms](./media/profileforms.png)
+![Profile Models](./media/profilemodels.png)
+![Profile Views](./media/profileviews.png)
+![Profile Urls](./media/profileurls.png)
+
+Home APP
+
+![Home Views](./media/homeviews.png)
+![Home Urls](./media/homeurls.png)
+
+Competitions APP
+
+![Competition Admin](./media/competitionadmin.png)
+![Competition Forms](./media/competitionforms.png)
+![Competition Models](./media/competitionmodels.png)
+![Competition Views](./media/competitionviews.png)
+![Competition Urls](./media/competitionurls.png)
+
+Connect APP
+
+![Connect Admin](./media/connectadmin.png)
+![Connect Forms](./media/connectforms.png)
+![Connect Models](./media/connectmodels.png)
+![Connect Views](./media/connectviews.png)
+![Connect Urls](./media/connecturls.png)
+
+Beyond the Barbell APP
+
+![Beyond the Barbell Views](./media/bbviews.png)
+![Beyond the Barbell Urls](./media/bburls.png)
+
 
 
 
