@@ -56,12 +56,12 @@ Beyond the Barbell is a business to customer (B2C) e-commerce site, selling prod
 
 Features of this business-focused website include a shopping cart, a catalogue of products, an online payment system that can save the customer’s preferred mode of payment, sign up for an email newsletter, contact us page, and view the private policy statement.
 
-The site was developed using Python in the Django framework and styled using CSS and Bootstrap. ElephantSQL is used for the database and Heroku for deployment. The site is for anyone who is interested in health and fitness. Whether it's wanting to join the gym, buy products such as gear and gym clothes, to buy products for health and fitness, this website is for someone who aims to be more health conscious.
+The site was developed using Python in the Django framework and styled using CSS and Bootstrap. ElephantSQL is used for the database and Heroku for deployment. The site is for anyone who is interested in health and fitness. Whether it's wanting to join the gym, buying products such as gear and gym clothes, to buying products for health and fitness, this website is for someone who aims to be more health conscious.
 
 # UX
 
 The purpose of the website is to be able to give users an opportunity to explore what is available at this particular gym.
-Whether it's products or memberships, the goal is for the user to be able to browse through the site easy. The user should be able to purchase items easily, subscribe, contact us, and sign up for competitions to be part of the CrossFit community.
+Whether it's products or memberships, the goal is for the user to be able to browse through the site easily. The user should be able to purchase items easily, subscribe, contact us, and sign up for competitions to be part of the CrossFit community.
 
 User stories
 
@@ -150,7 +150,7 @@ Logout page: Logging out of the account is done through the menu, after which th
 
 Products page: A user can view all the products offered and sort through the products offered. Can sort by category, rating, & price. Users can also use the search feature as well.
 
-Train With Us: There are two options here: Memberships & Personal training sessions. Memberships to purchase are 3, 6, & 12 months, while a user can purhcase personal training sessions in 1, 5, or 10 sessions.
+Train With Us: There are two options here: Memberships & Personal training sessions. Memberships to purchase are 3, 6, & 12 months, while a user can purchase personal training sessions in 1, 5, or 10 sessions.
 
 Competitions: You must be logged in to join a competition, but here users can see which competitions they can join. They can also view and delete their competitions as well.
 
@@ -229,10 +229,10 @@ Webshop Products - Where a user can view products by categories:
 Product Details - Where a user can view the product details - size (if applicable), description, quantity, & add to cart feature:
 ![Product Details](./media/productdetails.png)
 
-Competitions - Where a user can view competitions to join if they are signed up and logged in: 
+Competitions - Where a user can view competitions that are currently offered: 
 ![Competitions page](./media/joincomp.png)
 
-Competition Booking Page - Where a user can view the competitions they are booked and/or delete their bookings.
+Competition Booking Page - Where a user can view the competitions they are booked and/or delete their bookings. They need to be signed in for this:
 ![Competition Booking page](./media/competitionbooking.png)
 
 Connect With Us - This is where users can do several things - contact us, read/write reviews, join newsletter, read the private policy.
@@ -261,6 +261,9 @@ Check Out - User can go to checkout to buy their products. This is fully functio
 Order Success - User is informed that their order was successful and can see their orders:
 ![Order page](./media/ordersuccess.png)
 
+Order History - User can view their orders:
+![Order history](./media/orderhistory.png)
+
 Edit or Delete Product - Where Admin can edit and delete products:
 ![Edit or Delete Product page](./media/editanddeleteproducts.png)
 
@@ -287,7 +290,7 @@ Link to Facebook page:
 
 The same cover image is used as in the homepage for the company website. Consistency in the company colours and images makes the brand easier to recognise and remember.
 
-Users can be brought to this page by clicker the footer facebook image.
+Users can be brought to this page by clicker the footer facebook icon.
 
 Custom 404 Page for the user if there is an error:
 ![Custom404](./media/custom404.png)
@@ -349,14 +352,14 @@ Custom 404 Page for the user if there is an error:
 Products are what is the main focus of the e-commerce website. Admin can add, edit, and delete a product, add related image, and descriptions - as well as competitions and reviews.
 
 CRUD
-* Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join as well as reviews of personal trainers.
-* Read: All users can view all the product and read about them in the product navbar. All users can read the competitions offered and read reviews of personal trainers.
+* Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join.
+* Read: All users can view all the productd and read about them in the product navbar. All users can read the competitions offered.
 * Update: Only admin can update the products and competitions.
-* Delete: Only admin can delete the products, competitions, & reviews.
+* Delete: Only admin can delete the products, competitions.
 
 ## Reviews
 
-Users can leave a review about personal training.
+Users can leave a review about personal trainers.
 
 CRUD
 * Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
@@ -395,10 +398,10 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with inconsistent margins on some of the pages I created | Adjusted CSS on these pages accordingly|
 | Issue when using Mail Chimp when using a google account | Needed to contact tutor in order to create runtime.txt file to add to my project|
 | Issue with model for booking competitons to join | Fixed issues with form because it would bring me to a new page where a user could change the user for their booking. Used print statements to find where the issue was|
-| Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first|
+| Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first and models settings|
 | Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
-| Issue of admin approval not working prior to posting | In my models I forgot the approval field so that once in admin I could change it to true|
+
 
 * Example of format error on smaller screens for the cart - it goes down on the next line almost:
 ![Cart Error](./media/carterror.jpg)
