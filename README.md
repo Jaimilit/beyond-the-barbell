@@ -264,6 +264,9 @@ Order Success - User is informed that their order was successful and can see the
 Order History - User can view their orders:
 ![Order history](./media/orderhistory.png)
 
+Email Confirmation of Order - Email confirmation or order:
+![Email Order Confirmation](./media/orderconfirmationemail.png)
+
 Edit or Delete Product - Where Admin can edit and delete products:
 ![Edit or Delete Product page](./media/editanddeleteproducts.png)
 
@@ -301,7 +304,6 @@ Custom 404 Page for the user if there is an error:
 * Page with information about the personal trainers
 * Page where user can view past competitions
 * Page where users can connect with other users
-* Receive email of confirmation of order history
 * Implement functionality to send monthly subscription newsletters based on site updates
 
 
