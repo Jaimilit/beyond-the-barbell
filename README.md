@@ -452,7 +452,7 @@ During testing a few issues were identified and corrected:
 * All lines adjusted to <80 characters
 * Minor errors with missing closing tags
 
-All work passed with the exeception of a few lines that were too long. However, these lines were from the Boutique Ado walkthrough and; therefore, I thought it was ok to leave as this is the example my work was based upon.
+All work passed python linter.
 
 * 404 page created if there's any errors:
 ![Custom404](./media/custom404.png)
@@ -565,7 +565,10 @@ Beyond the Barbell Views:
 Beyond the Barbell Urls:
 ![Beyond the Barbell Urls](./media/bburls.png)
 
+If there are any issues with Stripe, I had contact with them about issues in Sweden:
 
+![Stripe Alert](./media/stripealert.png)
+![Stripe Issue](./media/stripeissue.png)
 
 # Deployment
 I followed the below steps using the Code Institute tutorial. The project was first created in GitHub. The project code is stored on GitHub, and then deployed to Heroku. To deploy, follow these steps:
