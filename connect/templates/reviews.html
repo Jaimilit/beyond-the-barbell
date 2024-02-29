@@ -31,7 +31,6 @@
                </div>
             </div>
          </div>
-         <!-- Display existing reviews -->
          <div class="card mb-3">
             <div class="card-body">
                <h3 class="card-title">Read Our Reviews</h3>
@@ -42,9 +41,13 @@
                      <p><strong>Trainer: </strong>{{ review.trainer }}</p>
                      <p><strong>Review: </strong>{{ review.content }}</p>
                      <p><strong>Rating: </strong>{{ review.rating }}</p>
-                     <!-- Edit and Delete Buttons -->
+                     <!-- Edit Button -->
                      <a href="{% url 'edit_review' review.id %}" class="btn btn-primary">Edit</a>
-                     <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Delete</a>
+                     <!-- Delete Form -->
+                     <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                     </form>
                   </li>
                   {% endfor %}
                </ul>
