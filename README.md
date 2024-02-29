@@ -621,3 +621,4 @@ All images were free to use from [Pexels](https://www.pexels.com/) and [Unsplash
 * I wanted to keep the same theme for many of my project - the theme of CrossFit which I have done for many of my projects. 
 * Farah Maria's Readme.md file was used as a template for writing my own Readme from project 4.
 * CrossFit Fabriken website was used as inspiration as well as Nordic Wellness website for CrossFit boxes.
+* ChatGpt used to write personal trainer reviews and competition descriptions.
