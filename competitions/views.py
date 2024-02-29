@@ -17,7 +17,10 @@ def competitions(request):
         user_profile = request.user.userprofile
 
         # Check if the user has already booked this competition
-        existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
+        existing_booking = Booking.objects.filter(
+            user_profile=user_profile,
+            competition=competition
+        ).first()
         if existing_booking:
             messages.warning(
                 request, 'You have already booked this competition.')
@@ -39,7 +42,10 @@ def booking(request, competition_id):
     user_profile = request.user.userprofile
 
     # Check if the user has already booked this competition
-    existing_booking = Booking.objects.filter(user_profile=user_profile, competition=competition).first()
+    existing_booking = Booking.objects.filter(
+        user_profile=user_profile,
+        competition=competition
+    ).first()
     if existing_booking:
         messages.warning(request, 'You have already booked this competition.')
         return redirect('my_bookings')
@@ -56,14 +62,19 @@ def booking(request, competition_id):
     else:
         form = BookingForm()
 
-    return render(request, 'booking.html', {'form': form, 'competition': competition})
+    return render(request,
+                  'booking.html', {'form': form, 'competition': competition}
+                  )
 
 
 @login_required
 def my_bookings(request):
     """View to display user bookings"""
-    user_bookings = Booking.objects.filter(user_profile=request.user.userprofile)
-    return render(request, 'my_bookings.html', {'user_bookings': user_bookings})
+    user_bookings = Booking.objects.filter(
+        user_profile=request.user.userprofile
+        )
+    return render(request, 'my_bookings.html',
+                  {'user_bookings': user_bookings})
 
 
 @login_required
