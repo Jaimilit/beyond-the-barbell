@@ -313,10 +313,10 @@ Custom 404 Page for the user if there is an error:
 
 ## Languages:
 
-* Python
-* JavaScript
-* HTML5
-* CSS3
+* [Python]((https://www.python.org/))
+* [JavaScript](https://www.javascript.com/)
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 ## Frameworks, Libraries, and Programs:
 
