@@ -5,6 +5,10 @@ from django.contrib import messages
 from .forms import ContactForm
 from .forms import ReviewForm
 from .models import TrainerReview
+from django.shortcuts import redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
+
+
 
 
 def contact(request, *args, **kwargs):
@@ -29,15 +33,15 @@ def contact(request, *args, **kwargs):
 
     return render(request, 'contact_us.html', {'form': form})
 
-
+@login_required
 def submit_review(request):
-    """ View to submit a review """
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
+            review.user = request.user
             review.save()
-            messages.success(request, 'Thank you for your review! It will be published after admin approval.')
+            messages.success(request, 'Thank you for your review!')
             return redirect(reverse('reviews'))
         else:
             messages.error(request, 'Oops! There is an error with your review. Please check your details and try again.')
@@ -46,9 +50,33 @@ def submit_review(request):
     return render(request, 'submit_review.html', {'form': form})
 
 
+@login_required
+def edit_review(request, review_id):
+    review = get_object_or_404(TrainerReview, pk=review_id)
+    if request.method == 'POST':
+        form = ReviewForm(request.POST, instance=review)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your review has been updated successfully.')
+            return redirect(reverse('reviews'))
+    else:
+        form = ReviewForm(instance=review)
+    return render(request, 'submit_review.html', {'form': form})
+
+
+@login_required
+def delete_review(request, review_id):
+    review = get_object_or_404(TrainerReview, pk=review_id, user_profile=request.user.userprofile)
+    if request.method == 'POST':
+        review.delete()
+        messages.success(request, 'Your review has been deleted successfully.')
+        return redirect('reviews')
+    return render(request, 'delete_review.html', {'review': review})
+
+
 def reviews(request):
     """ View to display reviews """
-    reviews = TrainerReview.objects.filter(approved=True)
+    reviews = TrainerReview.objects.all() 
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
 

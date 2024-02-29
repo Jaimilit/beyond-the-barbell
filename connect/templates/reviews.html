@@ -42,6 +42,9 @@
                      <p><strong>Trainer: </strong>{{ review.trainer }}</p>
                      <p><strong>Review: </strong>{{ review.content }}</p>
                      <p><strong>Rating: </strong>{{ review.rating }}</p>
+                     <!-- Edit and Delete Buttons -->
+                     <a href="{% url 'edit_review' review.id %}" class="btn btn-primary">Edit</a>
+                     <a href="{% url 'delete_review' review.id %}" class="btn btn-danger">Delete</a>
                   </li>
                   {% endfor %}
                </ul>

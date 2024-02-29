@@ -1,6 +1,8 @@
 from django.db import models
 from django.utils import timezone
 from profiles.models import UserProfile
+from django.contrib.auth.models import User
+
 
 
 class Contact(models.Model):
@@ -15,10 +17,16 @@ class Contact(models.Model):
         ordering = ['-date']
 
 
-STATUS = ((0, "Draft"), (1, "Published"))
 
 
 class TrainerReview(models.Model):
+    user_profile = models.ForeignKey(
+        UserProfile,
+        on_delete=models.CASCADE,
+        default=1,
+        related_name='trainer_reviews'
+    )
+    # Your other fields
     trainer = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     content = models.TextField()
@@ -30,8 +38,6 @@ class TrainerReview(models.Model):
         (5, '5 stars'),
     ]
     rating = models.IntegerField(choices=RATING_CHOICES)
-    date_posted = models.DateTimeField(auto_now_add=True)
-    approved = models.BooleanField(default=False)
 
     def __str__(self):
         return self.title
