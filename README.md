@@ -428,8 +428,8 @@ The site was constantly tested during the process of creating the site in the Gi
 * Example of format margin on some of the webpages - this was a consistent issue
 ![Margin Error](./media/marginissue.png)
 
-* Example of admin approval not working prior to posting on website
-![Admin Approval Error](./media/adminapprovalnotworking.png)
+* Example of buttons not working on reviews page:
+![button for delete and edit](./media/adminapprovalnotworking.png)
 
 
 ## Validation
