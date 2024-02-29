@@ -32,13 +32,15 @@ def contact(request, *args, **kwargs):
 
     return render(request, 'contact_us.html', {'form': form})
 
+
 @login_required
 def submit_review(request):
+    """ To be able to write a review as a logged in user """
     if request.method == 'POST':
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.user_profile = request.user.userprofile  # Correct association
+            review.user_profile = request.user.userprofile  
             review.save()
             messages.success(request, 'Thank you for your review!')
             return redirect(reverse('reviews'))
@@ -51,13 +53,15 @@ def submit_review(request):
 
 @login_required
 def edit_review(request, review_id):
+    """ To be able to edit only my own reviews as a logged in user """
+
     review = get_object_or_404(TrainerReview, pk=review_id)
     
     # Check if the logged-in user is the author of the review
     if review.user_profile != request.user.userprofile:
         error_message = "You are not authorized to edit this review."
         messages.error(request, error_message)
-        return redirect(reverse('reviews'))  # Redirect to reviews page
+        return redirect(reverse('reviews'))  
         
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
@@ -72,6 +76,8 @@ def edit_review(request, review_id):
 
 @login_required
 def delete_review(request, review_id):
+    """ A delete a review I've written as a logged in user """
+
     review = get_object_or_404(TrainerReview, pk=review_id)
 
     if review.user_profile != request.user.userprofile:
