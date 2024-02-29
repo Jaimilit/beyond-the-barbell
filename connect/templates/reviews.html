@@ -41,18 +41,21 @@
                      <p><strong>Trainer: </strong>{{ review.trainer }}</p>
                      <p><strong>Review: </strong>{{ review.content }}</p>
                      <p><strong>Rating: </strong>{{ review.rating }}</p>
-                     <!-- Edit Button -->
-                     <a href="{% url 'edit_review' review.id %}" class="btn btn-primary">Edit</a>
-                     <!-- Delete Form -->
-                     <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline">
-                        {% csrf_token %}
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                     </form>
-                  </li>
-                  {% endfor %}
-               </ul>
-            </div>
-         </div>
+                <!-- Edit and Delete Buttons -->
+                {% if review.user_profile == request.user.userprofile %}
+                <!-- Edit Button -->
+                <a href="{% url 'edit_review' review.id %}" class="btn btn-primary">Edit</a>
+                <!-- Delete Form -->
+                <form action="{% url 'delete_review' review.id %}" method="post" class="d-inline">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
       </div>
    </div>
 </div>
