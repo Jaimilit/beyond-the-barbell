@@ -240,6 +240,8 @@ Contact us offers a fully functional form for the user to contact us.
 ![contact us page](./media/contactus.png)
 The Reviews Page the user can read reviews of personal trainers as well as write their own review. The review will need to be approved first by admin prior to posting.
 ![reviews page](./media/reviews.png)
+The Reviews Page the user can edit and delete only their own posts - buttons only show up on their own posts to make changes.
+![reviews edit and delete](./media/editdeletereviews.png)
 The newsletter - the user can fully subscribe using MailChimp and let's the user know it was successful.
 ![newsletter page](./media/subscribe.png)
 ![newsletter joined page](./media/subscribemessage.png)
@@ -413,6 +415,9 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first and models settings|
 | Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
+| Couldn't get to edit/delete review for the right user | Need to ensure this was in my code: 
+    if review.user_profile != request.user.userprofile: |
+| Couldn't get the buttons to show up for the right user | Needed to add this to my code {% if review.user_profile == request.user.userprofile %} on the reviews.html page |
 
 
 * Example of format error on smaller screens for the cart - it goes down on the next line almost:
