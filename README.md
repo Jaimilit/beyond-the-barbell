@@ -154,7 +154,7 @@ Train With Us: There are two options here: Memberships & Personal training sessi
 
 Competitions: You must be logged in to join a competition, but here users can see which competitions they can join. They can also view and delete their competitions as well.
 
-Connect With Us: Here users have a few different views: Contact Us, Reviews, Newsletter & Private Policy. The contact us page the user can complete a form to contact us. The reviews page a user can view personal training reviews and write their own review which will be approved by admin prior to posting. Users can also sign up for a newsletter, as well as view the private policy statement.
+Connect With Us: Here users have a few different views: Contact Us, Reviews, Newsletter & Private Policy. The contact us page the user can complete a form to contact us. The reviews page a user can view personal training reviews and write their own review. They can also edit or delete only their own posts. Users can also sign up for a newsletter, as well as view the private policy statement.
 
 Facebook Page: Created for this project aimed at continued growth and promotion of the website.
 
@@ -238,9 +238,9 @@ Competition Booking Page - Where a user can view the competitions they are booke
 Connect With Us - This is where users can do several things - contact us, read/write reviews, join newsletter, read the private policy.
 Contact us offers a fully functional form for the user to contact us.
 ![contact us page](./media/contactus.png)
-The Reviews Page the user can read reviews of personal trainers as well as write their own review. The review will need to be approved first by admin prior to posting.
+The Reviews Page the user can read reviews of personal trainers as well as write their own review. 
 ![reviews page](./media/reviews.png)
-The Reviews Page the user can edit and delete only their own posts - buttons only show up on their own posts to make changes.
+The Reviews Page the user can edit and delete only their own posts - buttons only show up on their own posts to make changes. 
 ![reviews edit and delete](./media/editdeletereviews.png)
 The newsletter - the user can fully subscribe using MailChimp and let's the user know it was successful.
 ![newsletter page](./media/subscribe.png)
@@ -313,10 +313,10 @@ Custom 404 Page for the user if there is an error:
 
 ## Languages:
 
-* [Python]((https://www.python.org/))
-* [JavaScript](https://www.javascript.com/)
-* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Python](https://www.python.org/): Used for backend development, data processing, and scripting due to its simplicity and vast libraries
+* [JavaScript](https://www.javascript.com/): Enhanced interactivity and dynamic behavior of the website, providing functionalities like form validation and DOM manipulation
+* [HTML5](https://developer.mozilla.org/en-US/docs/Web/HTML): Structured web page content and layout for compatibility across devices and browsers
+* [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS): Styled and visually enhanced web pages for improved user experience and aesthetics
 
 ## Frameworks, Libraries, and Programs:
 
@@ -368,8 +368,8 @@ Users can leave a review about personal trainers.
 CRUD
 * Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means. All users who are logged in can write a review.
 * Read: All users can read the reviews about personal trainers.
-* Update: Any user who is logged in can update their review.
-* Delete: Any user who is logged in can delete a review.
+* Update: Any user who is logged in can update their own review.
+* Delete: Any user who is logged in can delete only reviews they've written.
 
 ## Competitions
 
@@ -412,12 +412,11 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue with inconsistent margins on some of the pages I created | Adjusted CSS on these pages accordingly|
 | Issue when using Mail Chimp when using a google account | Needed to contact tutor in order to create runtime.txt file to add to my project|
 | Issue with model for booking competitons to join | Fixed issues with form because it would bring me to a new page where a user could change the user for their booking. Used print statements to find where the issue was|
-| Issue with reviews page, that I forgot to add admin approval first so it would automatically post | Changed admin settings so admin could approve post first and models settings|
 | Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
-| Couldn't get to edit/delete review for the right user | Need to ensure this was in my code: 
+| Couldn't get to edit/delete review for the right user | Needed to ensure this was in my code: 
     if review.user_profile != request.user.userprofile: |
-| Couldn't get the buttons to show up for the right user | Needed to add this to my code {% if review.user_profile == request.user.userprofile %} on the reviews.html page |
+| Couldn't get the buttons to show up for the right user | Needed to add this to my code: if review.user_profile == request.user.userprofile  on the reviews.html page |
 
 
 * Example of format error on smaller screens for the cart - it goes down on the next line almost:
