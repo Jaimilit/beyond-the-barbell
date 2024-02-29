@@ -354,20 +354,30 @@ Custom 404 Page for the user if there is an error:
 Products are what is the main focus of the e-commerce website. Admin can add, edit, and delete a product, add related image, and descriptions - as well as competitions and reviews.
 
 CRUD
-* Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. They can also create competitions for their users to join.
-* Read: All users can view all the productd and read about them in the product navbar. All users can read the competitions offered.
-* Update: Only admin can update the products and competitions.
-* Delete: Only admin can delete the products, competitions.
+* Create: If the user is an authenticated superuser, they can add a new product by clicking the my account icon in the top right corner and click on Product Management. Or they can do into the admin panel.
+* Read: All users can view all the products and read about them in the product navbar. 
+* Update: Only admin can update the products and product details.
+* Delete: Only admin can delete the products and information on product details.
 
 ## Reviews
 
 Users can leave a review about personal trainers.
 
 CRUD
-* Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means.
-* Read: All users, even those who are not logged in, can read all reviews written about the personal trainer.
-* Update: Only the admin can update review - but users can contact admin via the contact form.
-* Delete: Only the admin can approve and post or delete a review.
+* Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means. All users who are logged in can write a review.
+* Read: All users can read the reviews about personal trainers.
+* Update: Any user who is logged in can update their review.
+* Delete: Any user who is logged in can delete a review.
+
+## Competitions
+
+Competitions are events that users can join to build community with others.
+
+CRUD
+* Create: Only admin can create events.
+* Read: All users can view competitions.  
+* Update: Only admin can update the competitons.
+* Delete: All users can delete competitions/events they are signed up for.
 
 # Testing
 
