@@ -4,7 +4,6 @@ from profiles.models import UserProfile
 from django.contrib.auth.models import User
 
 
-
 class Contact(models.Model):
     """ Contact Form """
     name = models.CharField(max_length=200)
@@ -15,8 +14,6 @@ class Contact(models.Model):
 
     class Meta:
         ordering = ['-date']
-
-
 
 
 class TrainerReview(models.Model):

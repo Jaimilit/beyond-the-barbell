@@ -40,12 +40,14 @@ def submit_review(request):
         form = ReviewForm(request.POST)
         if form.is_valid():
             review = form.save(commit=False)
-            review.user_profile = request.user.userprofile  
+            review.user_profile = request.user.userprofile
             review.save()
             messages.success(request, 'Thank you for your review!')
             return redirect(reverse('reviews'))
         else:
-            messages.error(request, 'Oops! There is an error with your review. Please check your details and try again.')
+            messages.error(
+                request, 'Oops! There is an error with your review. \
+                 Please check your details and try again.')
     else:
         form = ReviewForm()
     return render(request, 'submit_review.html', {'form': form})
@@ -56,13 +58,13 @@ def edit_review(request, review_id):
     """ To be able to edit only my own reviews as a logged in user """
 
     review = get_object_or_404(TrainerReview, pk=review_id)
-    
+
     # Check if the logged-in user is the author of the review
     if review.user_profile != request.user.userprofile:
         error_message = "You are not authorized to edit this review."
         messages.error(request, error_message)
-        return redirect(reverse('reviews'))  
-        
+        return redirect(reverse('reviews'))
+
     if request.method == 'POST':
         form = ReviewForm(request.POST, instance=review)
         if form.is_valid():
@@ -96,7 +98,7 @@ def delete_review(request, review_id):
 
 def reviews(request):
     """ View to display reviews """
-    reviews = TrainerReview.objects.all() 
+    reviews = TrainerReview.objects.all()
     context = {'reviews': reviews}
     return render(request, 'reviews.html', context)
 
