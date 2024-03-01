@@ -17,13 +17,14 @@ class Contact(models.Model):
 
 
 class TrainerReview(models.Model):
+    """user to write reviews form"""
     user_profile = models.ForeignKey(
         UserProfile,
         on_delete=models.CASCADE,
         default=1,
         related_name='trainer_reviews'
     )
-    # Your other fields
+    
     trainer = models.CharField(max_length=100)
     title = models.CharField(max_length=100)
     content = models.TextField()

@@ -73,7 +73,9 @@ As a first time visitor, I want:
 * To be able to view products, memberships, read reviews, contact us, & subscribe with us
 * To be able to search and sort products easily
 * To be able to create an account and log out of a user account
-* To be able to purchase products, memberships, write reviews, contact us, & subscribe
+* To be able to purchase products, memberships, contact us, & subscribe with us
+* To be able to join a competition and delete it
+* To be able to write a review for a personal trainer, edit, & delete that review
 * To be able to receive confirmation of my actions via messages
 * To be able to pay via stripe service and receive free shipping if over 50 Euro
 * See link to facebook page in footer
@@ -93,6 +95,8 @@ As a returning user, I want:
 * Receive confirmation of my actions via messages
 * Be able to make secure payments
 * To view my profile
+* To be able to join a competition and delete it
+* To be able to write a review for a personal trainer, edit, & delete that review
 * To be able to pay via stripe service and receive free shipping if over 50 Euro
 * See link to facebook page in footer
 * To view custom 404 page if there is an error
@@ -101,14 +105,15 @@ As a returning user, I want:
 Site Administrator goals
 
 * As a Site Administrator I would like to be able to add, edit, & delete products
-* As a Site Administrator I can approve reviews written prior to posting
+* As a Site Administrator I can update and delete reviews
+* As a Site Administrator I can manage product orders
 * As a Site Administrator I can update, edit, & delete competitions
 
 ## Agile Tools
 
 The Projects section in GitHub was used for this project. A Kanban board was used for the development of this project, which made it possible to break down the project into subtasks and make it easier to complete and track project progress. In addition, labels were used to further define the priority of each user story in the Kanban board.
 
-The first thing I did was write the user stories I wanted my site to have. Then I created an outline in WireFrames of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas where there.
+The first thing I did was write the user stories I wanted my site to have. Then I created an outline in WireFrames of what I wanted my final product to look like. You can see it's not exactly the same, but the initial ideas were there.
 
 SEO considerations implemented: meta description of content and key search words in head of code. 
 Sitemap.xml was created for the site so that once ready engines like google can search it effectively.
@@ -117,7 +122,7 @@ Robots.txt file so that google could crawl the site. I have blocked off the acco
 
 # Design and Structure
 
-The layout and design of this site was kept basic and simple. Minimal color was used to keep the design simple. [Coolors](https://coolors.co/) was used for simple color choices. This website is meant to be functional and therefore I kept the color palette simple and something similiar to what you would see in an actual gym.  
+The layout and design of this site was kept basic and simple. Minimal color was used to keep the design simple. [Coolors](https://coolors.co/) was used for simple color choices. This website is meant to be functional and; therefore, I kept the color palette simple and something similiar to what you would see in an actual gym.  
 
 * Fonts chosen to be easy to read and use
 *  Favicons used in theme of fitness
@@ -366,7 +371,7 @@ CRUD
 Users can leave a review about personal trainers.
 
 CRUD
-* Create: Any user can write a review about a personal trainer. This is because oftentimes personal trainers work at more than one facility, so I wanted to leave it open because maybe the user knows a personal trainer previously or through other means. All users who are logged in can write a review.
+* Create: Any user can write a review about a personal trainer. All users who are logged in can write a review.
 * Read: All users can read the reviews about personal trainers.
 * Update: Any user who is logged in can update their own review.
 * Delete: Any user who is logged in can delete only reviews they've written.
@@ -410,13 +415,12 @@ The site was constantly tested during the process of creating the site in the Gi
 | Issue for formatting on smaller screens when added items to the cart| Adjusted CSS for smaller screens to fix issue|
 | Issue with formatting issue in footer on some of the pages | Adjust CSS for these pages, most of the time I forgot to end a div|
 | Issue with inconsistent margins on some of the pages I created | Adjusted CSS on these pages accordingly|
-| Issue when using Mail Chimp when using a google account | Needed to contact tutor in order to create runtime.txt file to add to my project|
+| Issue when using emails when using a google account to send order confirmation | Needed to contact tutor in order to create runtime.txt file to add to my project|
 | Issue with model for booking competitons to join | Fixed issues with form because it would bring me to a new page where a user could change the user for their booking. Used print statements to find where the issue was|
 | Issue importing fixtures when I had to create my own - this was very tedious | Had to do it all over again |
 | Issues from stripe that webhooks wasn't working when creating endpoints | Had to contact them and they said there had been a temporary issue in those who selected Sweden as their location, but this was fixed in a few days |
-| Couldn't get to edit/delete review for the right user | Needed to ensure this was in my code: 
-    if review.user_profile != request.user.userprofile: |
-| Couldn't get the buttons to show up for the right user | Needed to add this to my code: if review.user_profile == request.user.userprofile  on the reviews.html page |
+| Couldn't get to edit/delete review for the right user | Needed to ensure this was in my code was checking for the correcr profile user and looking for/connecting to the right account |
+| Couldn't get the buttons to show up for the right user when editing/deleting reviews | Again this was connected to connecting it to the right user |
 
 
 * Example of format error on smaller screens for the cart - it goes down on the next line almost:

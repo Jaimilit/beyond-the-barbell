@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Booking, Competition
 
+
 @admin.register(Competition)
 class CompetitionAdmin(admin.ModelAdmin):
     list_display = (

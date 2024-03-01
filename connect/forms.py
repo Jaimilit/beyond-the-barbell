@@ -21,6 +21,7 @@ class ContactForm(forms.ModelForm):
 
 
 class ReviewForm(forms.ModelForm):
+    """To write review of trainer"""
     class Meta:
         model = TrainerReview
         fields = ['title', 'content', 'trainer', 'rating']
