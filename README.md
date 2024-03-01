@@ -147,7 +147,7 @@ The scope of the project can be seen on the board, which I mainly limited to MVP
 ## Functional Structure
 Home page: The home page contains a navigation menu, logo, and an image that gives the user an idea of what the website is about. Here users are given a option to join or go to any of the links in which they are interested in.
 
-Registration page: The user must create an account to make a purhcase or to sign up for a competition. To do this, they are asked to fill out a form on the page with the required fields: Email, username, & password. They will need to confirm their email address.
+Registration page: The user must create an account to make a purchase, write a review, or to sign up for a competition. To do this, they are asked to fill out a form on the page with the required fields: Email, username, & password. They will need to confirm their email address.
 
 Sign In/Login page: A username/email and password are required to log in for existing users. Once signed in, they are directed to the home page.
 
